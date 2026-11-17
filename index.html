@@ -1,0 +1,785 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ahmed Omara · AEC Software Developer & BIM Engineer</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%2730%27 fill=%27%2312161C%27/%3E%3Ctext x=%2732%27 y=%2741%27 font-family=%27monospace%27 font-size=%2724%27 font-weight=%27700%27 fill=%27%233CC4BA%27 text-anchor=%27middle%27%3EAO%3C/text%3E%3C/svg%3E">
+<meta property="og:title" content="Ahmed Omara · AEC Software Developer & BIM Engineer">
+<meta property="og:description" content="Revit and AutoCAD automation, code compliance, structural integration and enterprise software for engineering teams.">
+<meta property="og:image" content="media/hero/hex-acud.webp">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Portfolio of Ahmed Omara, AEC software developer and BIM engineer: Revit and AutoCAD automation, code compliance, structural integration and enterprise software.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+/* Layout: a drawing set. Hero title block, a drawing register as the project index,
+   then one "sheet" per project: title-block strip, media left, notes right. */
+:root{
+  --paper:#ECEEEB; --sheet:#F8F9F7; --plate:#DADFE0; --ink:#12161C; --ink-2:#4A535E; --ink-3:#6E7781;
+  --rule:#C9CFD3; --accent:#00756D; --accent-ink:#FFFFFF; --amber:#9A5B00; --red:#C0392B;
+  --chart-a:#009A8E; --chart-b:#C27C0E; --chart-c:#9AA3AD;
+  --display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --body:"IBM Plex Sans","Segoe UI",Roboto,Arial,sans-serif;
+  --mono:"IBM Plex Mono",Consolas,"Cascadia Mono",monospace;
+  --step--1:.8125rem; --step-0:1rem; --step-1:1.1875rem; --step-2:1.5rem; --step-3:2.125rem; --step-4:clamp(2.6rem,6vw,4.75rem);
+  --wrap:1240px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#0F1317; --sheet:#151A20; --plate:#0B0E12; --ink:#E6EAEE; --ink-2:#A3ADB8; --ink-3:#7D8893;
+  --rule:#28313B; --accent:#3CC4BA; --accent-ink:#06211F; --amber:#F2B33D; --red:#F06A5F;
+  --chart-a:#25A99F; --chart-b:#C2821A; --chart-c:#5E6873; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0F1317; --sheet:#151A20; --plate:#0B0E12; --ink:#E6EAEE; --ink-2:#A3ADB8; --ink-3:#7D8893;
+  --rule:#28313B; --accent:#3CC4BA; --accent-ink:#06211F; --amber:#F2B33D; --red:#F06A5F;
+  --chart-a:#25A99F; --chart-b:#C2821A; --chart-c:#5E6873; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:var(--step-0);line-height:1.6;
+  background-image:linear-gradient(var(--rule) 1px,transparent 1px),linear-gradient(90deg,var(--rule) 1px,transparent 1px);
+  background-size:96px 96px;background-position:-1px -1px;background-attachment:fixed}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--sheet)}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);line-height:1.08;text-wrap:balance;margin:0}
+p{margin:0}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.mono{font-family:var(--mono)}
+.label{font-family:var(--mono);font-size:var(--step--1);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--sheet) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+.nav .wrap{display:flex;align-items:center;gap:24px;min-height:56px;flex-wrap:wrap}
+.brand{font-family:var(--display);font-weight:800;font-stretch:112%;letter-spacing:.02em;text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:10px}
+.brand i{width:26px;height:26px;border:1.5px solid var(--ink);border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:12px;font-family:var(--mono)}
+.nav ul{display:flex;gap:18px;list-style:none;margin:0 0 0 auto;padding:0;flex-wrap:wrap}
+.nav ul a{color:var(--ink-2);text-decoration:none;font-size:var(--step--1);font-weight:500}
+.nav ul a:hover{color:var(--ink)}
+@media (max-width:640px){.nav ul{display:none}}
+
+/* hero */
+.hero{padding-block:64px 40px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:48px;align-items:end}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr;gap:32px}}
+.hero h1{font-size:var(--step-4);font-weight:850;font-stretch:118%;letter-spacing:-.01em;margin-top:14px}
+.hero .thesis{font-size:var(--step-2);font-family:var(--display);font-weight:500;font-stretch:96%;line-height:1.25;margin-top:18px;max-width:30ch}
+.hero .thesis em{font-style:normal;color:var(--accent)}
+.hero .lede{color:var(--ink-2);margin-top:18px;max-width:62ch}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border:1.5px solid var(--ink);border-radius:2px;color:var(--ink);text-decoration:none;font-weight:600;font-size:var(--step--1);background:transparent;cursor:pointer;font-family:var(--body)}
+.btn.primary{background:var(--ink);color:var(--paper)}
+.btn:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+
+/* title block (hero facts) */
+.tblock{border:1.5px solid var(--ink);background:var(--sheet);font-family:var(--mono);font-size:var(--step--1)}
+.tblock .row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--rule)}
+.tblock .row:first-child{border-top:0}
+.tblock .cell{padding:10px 14px;border-left:1px solid var(--rule);min-width:0}
+.tblock .cell:first-child{border-left:0}
+.tblock .k{display:block;font-size:.6875rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.tblock .v{display:block;color:var(--ink);font-weight:500;overflow-wrap:anywhere}
+.tblock .full{grid-column:1/-1}
+.tblock .head{background:var(--ink);color:var(--paper);padding:10px 14px;display:flex;justify-content:space-between;gap:12px;font-weight:600;letter-spacing:.06em}
+
+.hero-side{display:grid;gap:18px}
+.hexes{display:flex;justify-content:flex-end;gap:0;margin-bottom:-6px}
+.hexes img{width:min(46%,230px);filter:drop-shadow(0 10px 18px rgba(0,0,0,.18));transition:transform .4s}
+.hexes img:nth-child(2){margin-left:-6%;margin-top:22%}
+.hexes img:hover{transform:translateY(-4px) rotate(-2deg)}
+@media (max-width:900px){.hexes{justify-content:center}}
+.proj,.concept{transition:box-shadow .25s,transform .25s}
+.proj:hover{box-shadow:8px 8px 0 color-mix(in srgb,var(--accent) 35%,transparent)}
+.concept:hover{box-shadow:6px 6px 0 color-mix(in srgb,var(--accent) 35%,transparent);transform:translateY(-2px)}
+/* impact strip */
+.impact{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border:1.5px solid var(--ink);background:var(--sheet);margin-top:40px}
+@media (max-width:1000px){.impact{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:560px){.impact{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.impact div{padding:16px 16px 18px;border-left:1px solid var(--rule);border-top:1px solid var(--rule);margin:-1px 0 0 -1px;min-width:0}
+.impact b{display:block;font-family:var(--display);font-stretch:112%;font-weight:800;font-size:var(--step-3);line-height:1;font-variant-numeric:tabular-nums}
+.impact span{display:block;margin-top:8px;font-size:var(--step--1);color:var(--ink-2);line-height:1.4}
+.impact small{display:block;margin-top:6px;font-family:var(--mono);font-size:.6875rem;color:var(--ink-3)}
+
+/* section headers */
+.sec{padding-block:72px 24px}
+.sec-head{display:flex;align-items:end;justify-content:space-between;gap:24px;flex-wrap:wrap;border-bottom:1.5px solid var(--ink);padding-bottom:14px;margin-bottom:24px}
+.sec-head h2{font-size:var(--step-3);font-weight:800;font-stretch:112%}
+.sec-head p{color:var(--ink-2);max-width:56ch}
+
+/* register */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.chip{font:500 var(--step--1)/1 var(--body);padding:8px 12px;border:1px solid var(--rule);background:var(--sheet);color:var(--ink-2);border-radius:999px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.reg-wrap{overflow-x:auto;border:1.5px solid var(--ink);background:var(--sheet)}
+table.reg{width:100%;border-collapse:collapse;font-size:var(--step--1);min-width:760px}
+.reg th{font-family:var(--mono);font-weight:500;font-size:.6875rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);text-align:left;padding:10px 14px;border-bottom:1px solid var(--ink)}
+.reg td{padding:12px 14px;border-bottom:1px solid var(--rule);vertical-align:top}
+.reg tr:last-child td{border-bottom:0}
+.reg td:first-child{font-family:var(--mono);font-weight:600;white-space:nowrap}
+.reg a{color:var(--ink);font-weight:600;text-decoration:none}
+.reg a:hover{color:var(--accent);text-decoration:underline}
+.reg .sub{display:block;color:var(--ink-3);font-weight:400}
+.pill{display:inline-block;font-family:var(--mono);font-size:.6875rem;padding:3px 7px;border:1px solid currentColor;border-radius:2px;white-space:nowrap;margin:0 4px 4px 0}
+.pill.cap{color:var(--accent)} .pill.ill{color:var(--amber)} .pill.vid{color:var(--ink-2)} .pill.todo{color:var(--red)}
+
+/* project sheet */
+.proj{margin-top:56px;background:var(--sheet);border:1.5px solid var(--ink)}
+.strip{display:grid;grid-template-columns:auto minmax(0,1fr) repeat(3,auto);border-bottom:1.5px solid var(--ink)}
+.strip>div{padding:10px 16px;border-left:1px solid var(--rule);min-width:0}
+.strip>div:first-child{border-left:0}
+.strip .no{font-family:var(--display);font-weight:800;font-stretch:115%;font-size:var(--step-2);display:flex;align-items:center;background:var(--ink);color:var(--paper)}
+.strip .k{display:block;font-family:var(--mono);font-size:.6875rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.strip .v{font-family:var(--mono);font-size:var(--step--1);font-weight:500}
+@media (max-width:900px){.strip{grid-template-columns:auto minmax(0,1fr)}.strip>div:nth-child(n+3){grid-column:span 1;border-top:1px solid var(--rule)}.strip>div:nth-child(3){border-left:0}}
+@media (max-width:900px){.strip>div:nth-child(5){grid-column:1/-1;border-left:0}}
+.strip h3{font-size:var(--step-2);font-weight:800;font-stretch:105%}
+.strip .kicker{display:block;color:var(--ink-2);font-size:var(--step--1);margin-top:2px}
+.proj-body{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr)}
+@media (max-width:980px){.proj-body{grid-template-columns:1fr}}
+.media{padding:20px;display:grid;gap:20px;border-right:1px solid var(--rule);min-width:0}
+@media (max-width:980px){.media{border-right:0;border-bottom:1px solid var(--rule)}}
+.notes{padding:22px 24px;display:grid;gap:22px;align-content:start;min-width:0}
+.notes h4{font-family:var(--mono);font-weight:500;font-size:.6875rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin:0 0 8px}
+.notes p{color:var(--ink-2);max-width:62ch}
+.notes ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.notes li{position:relative;padding-left:20px;color:var(--ink-2)}
+.notes li::before{content:"";position:absolute;left:2px;top:.62em;width:8px;height:8px;border:1.5px solid var(--accent);border-radius:50%}
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--rule)}
+.kpis div{padding:12px;border-left:1px solid var(--rule);min-width:0}
+.kpis div:first-child{border-left:0}
+.kpis b{display:block;font-family:var(--display);font-stretch:112%;font-weight:800;font-size:var(--step-2);line-height:1.05;font-variant-numeric:tabular-nums}
+.kpis span{display:block;font-size:.75rem;color:var(--ink-3);margin-top:4px;line-height:1.35}
+.stack{display:flex;flex-wrap:wrap;gap:6px}
+.stack span{font-family:var(--mono);font-size:.75rem;padding:4px 8px;background:var(--paper);border:1px solid var(--rule);border-radius:2px}
+details.folder{border-top:1px solid var(--rule);font-size:var(--step--1)}
+details.folder summary{cursor:pointer;padding:12px 24px;font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;font-size:.75rem;color:var(--ink-2);list-style:none;display:flex;gap:10px;align-items:center}
+details.folder summary::-webkit-details-marker{display:none}
+details.folder summary::before{content:"+";font-weight:700;color:var(--accent);width:12px}
+details.folder[open] summary::before{content:"−"}
+.folder-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--rule)}
+@media (max-width:760px){.folder-grid{grid-template-columns:1fr}}
+.folder-grid>div{padding:14px 24px 18px;border-left:1px solid var(--rule);min-width:0}
+.folder-grid>div:first-child{border-left:0}
+.folder-grid ul{margin:6px 0 0;padding-left:18px;color:var(--ink-2)}
+.folder-grid p{color:var(--ink-2);margin-top:6px}
+
+/* gallery */
+.gal{min-width:0}
+.gal-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;background:var(--plate);border:1px solid var(--rule);overscroll-behavior-x:contain}
+.gal-track::-webkit-scrollbar{display:none}
+.slide{flex:0 0 100%;scroll-snap-align:start;margin:0;aspect-ratio:16/10;display:grid;place-items:center;position:relative;max-width:100%}
+.slide button{all:unset;cursor:zoom-in;width:100%;height:100%;display:grid;place-items:center}
+.slide button:focus-visible{outline:2px solid var(--accent);outline-offset:-4px}
+.slide img{max-width:100%;max-height:100%;object-fit:contain;display:block}
+.gal-bar{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:start;margin-top:10px}
+.gal-cap{font-size:var(--step--1);color:var(--ink-2);min-width:0}
+.gal-cap .pill{margin-right:8px}
+.gal-ctl{display:flex;align-items:center;gap:6px;font-family:var(--mono);font-size:.75rem;color:var(--ink-3)}
+.gal-ctl button{width:34px;height:34px;border:1px solid var(--rule);background:var(--sheet);color:var(--ink);cursor:pointer;border-radius:2px;font-size:16px;line-height:1}
+.gal-ctl button:hover{border-color:var(--ink)}
+.gal-ctl button:disabled{opacity:.35;cursor:default}
+.dots{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.dots button{width:22px;height:4px;border:0;padding:0;background:var(--rule);cursor:pointer}
+.dots button[aria-current="true"]{background:var(--ink)}
+
+/* video + demo players */
+.vid,.player{background:#0B0E12;border:1px solid var(--rule);position:relative}
+.vid video{display:block;width:100%;aspect-ratio:16/10;background:#0B0E12}
+.vid-miss{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:24px;background:linear-gradient(rgba(11,14,18,.82),rgba(11,14,18,.92)),var(--poster) center/contain no-repeat #0B0E12;color:#E6EAEE}
+.vid-miss b{font-family:var(--display);font-size:var(--step-1);display:block}
+.vid-miss span{display:block;color:#A3ADB8;font-size:var(--step--1);margin-top:6px;max-width:46ch}
+.vid-miss code{display:block;margin-top:10px;font-family:var(--mono);font-size:.6875rem;color:#7D8893;overflow-wrap:anywhere}
+.media-head{display:flex;justify-content:space-between;gap:12px;align-items:baseline;margin-bottom:8px;flex-wrap:wrap}
+.player canvas{display:block;width:100%;aspect-ratio:16/10}
+.pbar{display:flex;align-items:center;gap:10px;padding:8px 10px;background:#151A20;border-top:1px solid #28313B;color:#A3ADB8;font-family:var(--mono);font-size:.75rem}
+.pbar button{width:32px;height:28px;border:1px solid #3A4552;background:#1E252D;color:#E6EAEE;cursor:pointer;border-radius:2px}
+.pbar input{flex:1;min-width:60px;accent-color:#3CC4BA}
+
+/* chart */
+.cov{display:grid;gap:10px}
+.cov-bar{display:flex;gap:2px;height:28px}
+.cov-bar span{display:block;height:100%;position:relative}
+.cov-bar span:first-child{border-radius:4px 0 0 4px}
+.cov-bar span:last-child{border-radius:0 4px 4px 0}
+.cov-bar span:hover{filter:brightness(1.12)}
+.cov-legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.75rem;color:var(--ink-2)}
+.cov-legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.cov table{width:100%;border-collapse:collapse;font-size:.75rem}
+.cov td{padding:4px 0;border-bottom:1px dashed var(--rule);color:var(--ink-2)}
+.cov td:last-child{text-align:right;font-family:var(--mono);color:var(--ink);font-variant-numeric:tabular-nums}
+.tip{position:fixed;z-index:50;pointer-events:none;background:var(--ink);color:var(--paper);font:500 .75rem/1.3 var(--mono);padding:6px 8px;border-radius:2px}
+
+/* lab */
+.lab{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+@media (max-width:900px){.lab{grid-template-columns:1fr}}
+.track{display:flex;align-items:baseline;gap:6px 18px;flex-wrap:wrap;margin:8px 0 16px;padding-top:8px}
+.track:not(:first-of-type){margin-top:40px}
+.track h3{font-size:var(--step-2);font-weight:800;font-stretch:108%}
+.track p{color:var(--ink-2);font-size:var(--step--1)}
+.concept{background:var(--sheet);border:1.5px solid var(--ink);display:grid;grid-template-rows:auto 1fr;min-width:0}
+.concept .slide{background:var(--plate);border-bottom:1px solid var(--rule)}
+.concept .body{padding:18px 20px 20px;display:grid;gap:12px;align-content:start}
+.concept h3{font-size:var(--step-2);font-weight:800;font-stretch:108%}
+.concept h3 small{display:block;font-family:var(--mono);font-size:.6875rem;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);font-weight:500;margin-bottom:6px}
+.concept p{color:var(--ink-2)}
+.concept dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 14px;margin:0;font-size:var(--step--1)}
+.concept dt{font-family:var(--mono);font-size:.6875rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);padding-top:2px}
+.concept dd{margin:0;color:var(--ink)}
+
+/* blueprint table */
+.bp-wrap{overflow-x:auto;border:1.5px solid var(--ink);background:var(--sheet)}
+table.bp{width:100%;border-collapse:collapse;font-size:var(--step--1);min-width:980px}
+.bp th{font-family:var(--mono);font-weight:500;font-size:.6875rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);text-align:left;padding:10px 14px;border-bottom:1px solid var(--ink);background:var(--paper)}
+.bp td{padding:12px 14px;border-bottom:1px solid var(--rule);vertical-align:top;color:var(--ink-2)}
+.bp td:first-child{color:var(--ink);font-weight:600}
+.bp ul{margin:0;padding-left:16px}
+
+/* experience */
+.xp{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px}
+@media (max-width:900px){.xp{grid-template-columns:1fr}}
+.tl{list-style:none;margin:0;padding:0;border-left:1.5px solid var(--ink)}
+.tl li{position:relative;padding:0 0 28px 24px}
+.tl li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;background:var(--sheet);border:1.5px solid var(--ink);border-radius:50%}
+.tl li:first-child::before{background:var(--accent);border-color:var(--accent)}
+.tl .when{font-family:var(--mono);font-size:.75rem;color:var(--ink-3)}
+.tl h3{font-size:var(--step-1);font-weight:700;margin-top:2px}
+.tl .org{color:var(--ink-2);font-size:var(--step--1)}
+.tl p{color:var(--ink-2);margin-top:8px;font-size:var(--step--1);max-width:60ch}
+.tl .sites{margin-top:8px;display:flex;flex-wrap:wrap;gap:6px}
+.skills{display:grid;gap:18px}
+.skills div{min-width:0}
+.skills h4{margin:0 0 6px;font-family:var(--mono);font-weight:500;font-size:.6875rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.more{margin-top:28px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:560px){.more{grid-template-columns:1fr}}
+.more div{border:1px solid var(--rule);padding:12px 14px;background:var(--sheet);min-width:0}
+.more b{display:block;font-size:var(--step--1)}
+.more span{display:block;font-size:.75rem;color:var(--ink-3);margin-top:2px}
+
+/* contact */
+.contact{background:var(--ink);color:var(--paper);margin-top:72px}
+.contact .wrap{padding-block:56px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:center}
+@media (max-width:800px){.contact .wrap{grid-template-columns:1fr}}
+.contact h2{font-size:var(--step-3);font-weight:800;font-stretch:112%}
+.contact p{opacity:.8;margin-top:10px;max-width:46ch}
+.contact dl{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:10px 16px;margin:0;font-family:var(--mono);font-size:var(--step--1);align-items:center}
+.contact dt{opacity:.6;font-size:.6875rem;letter-spacing:.1em;text-transform:uppercase}
+.contact dd{margin:0;overflow-wrap:anywhere}
+.contact a{color:inherit}
+.copy{font:500 .6875rem var(--mono);padding:4px 8px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer;border-radius:2px;opacity:.8}
+footer{padding-block:20px;font-family:var(--mono);font-size:.6875rem;color:var(--ink-3)}
+
+/* lightbox */
+dialog.lb{border:0;padding:0;background:transparent;max-width:min(96vw,1600px);width:100%}
+dialog.lb::backdrop{background:rgba(6,8,10,.88)}
+dialog.lb img{display:block;width:100%;max-height:84vh;object-fit:contain;background:#0B0E12}
+dialog.lb .lb-bar{display:flex;justify-content:space-between;gap:12px;align-items:center;color:#E6EAEE;padding:10px 4px;font-size:var(--step--1)}
+dialog.lb button{background:#E6EAEE;color:#0B0E12;border:0;padding:8px 14px;font:600 var(--step--1) var(--body);cursor:pointer;border-radius:2px}
+</style>
+
+<nav class="nav" aria-label="Sections">
+  <div class="wrap">
+    <a class="brand" href="#top"><i>AO</i>Ahmed Omara</a>
+    <ul>
+      <li><a href="#register">Projects</a></li>
+      <li><a href="#lab">Innovation lab</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="label">AEC software developer · BIM engineer · Cairo</span>
+        <h1>Ahmed Omara</h1>
+        <p class="thesis">I write the software that <em>draws, checks and models</em> for engineering teams, so engineers spend their hours on engineering.</p>
+        <p class="lede">Civil engineer by degree, BIM engineer on site and in consultancy, now building Revit and AutoCAD add-ins, compliance engines and ERP backends in C# and .NET. I know what an LOD 400 shop drawing costs to produce, and I automate the parts that shouldn't cost anything.</p>
+        <div class="cta">
+          <a class="btn primary" href="#register">See the projects</a>
+          <a class="btn" href="https://www.linkedin.com/in/ahmedomara707" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/ahmedem00" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <div class="hero-side">
+      <div class="hexes" aria-hidden="true"><img src="media/hero/hex-acud.webp" alt=""><img src="media/hero/hex-grid.webp" alt=""></div>
+      <div class="tblock" aria-label="Profile summary">
+        <div class="head"><span>PROFILE</span><span>SHEET 00 · REV 2026</span></div>
+        <div class="row"><div class="cell"><span class="k">Role</span><span class="v">AEC Software / .NET Developer</span></div><div class="cell"><span class="k">Current</span><span class="v">Consultancy Group</span></div></div>
+        <div class="row"><div class="cell"><span class="k">Disciplines</span><span class="v">STR · ARC · MEP · INFRA</span></div><div class="cell"><span class="k">Experience</span><span class="v">3+ years</span></div></div>
+        <div class="row"><div class="cell"><span class="k">BIM</span><span class="v">LOD 350/400 · clash · QA/QC · ISO 19650</span></div><div class="cell"><span class="k">APIs</span><span class="v">Revit · AutoCAD · Navisworks · ETABS · SAP2000</span></div></div>
+        <div class="row"><div class="cell"><span class="k">Software</span><span class="v">C# · .NET 8 · WPF/MVVM · ASP.NET Core · EF Core</span></div><div class="cell"><span class="k">Education</span><span class="v">B.Sc. Civil Eng. · ITI AEC Informatics</span></div></div>
+        <div class="row"><div class="cell full"><span class="k">Site projects</span><span class="v">Rosewood MH3 Triple Marina · KAUST Coral Restoration · Tour Triangle, Paris · DuPOD DCB Ph-3</span></div></div>
+      </div>
+      </div>
+    </div>
+
+    <div class="impact" aria-label="Impact in numbers">
+      <div><b>≈6 h</b><span>saved per user, per project on deliverable QA</span><small>MIDP Validator</small></div>
+      <div><b>249</b><span>authority conditions mapped to model checks</span><small>ACUD Checker</small></div>
+      <div><b>23</b><span>data-quality rules on every MIDP register</span><small>MIDP Validator</small></div>
+      <div><b>311</b><span>entities moved and 13 layers purged in one run</span><small>Layers Merger</small></div>
+      <div><b>4</b><span>AutoCAD versions served by one installer</span><small>CG Tools</small></div>
+      <div><b>7</b><span>ERP modules on a .NET 8 modular monolith</span><small>EIONE ERP</small></div>
+    </div>
+  </div>
+</header>
+
+<section class="sec" id="register">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Drawing register</h2>
+      <p>Nine projects, numbered like a drawing set. Each sheet carries screen captures from the working tools, explanatory illustrations and, where it helps, an animated walkthrough.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filter projects" id="filters"></div>
+    <div class="reg-wrap"><table class="reg" id="reg"><thead><tr><th>No.</th><th>Title</th><th>Scope</th><th>Platform</th><th>Media on sheet</th></tr></thead><tbody></tbody></table></div>
+    <div id="projects"></div>
+  </div>
+</section>
+
+<section class="sec" id="lab">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Innovation lab</h2>
+      <p>Twelve products I'd build next, in two tracks. Some reuse code from the projects above; others are new builds aimed at problems developers already pay to solve. Figures in the visuals are illustrative.</p>
+    </div>
+    <div class="track"><h3>For real-estate developers</h3><p>Feasibility, sales, contracts, handover and cash flow: where a developer's money is made or lost.</p></div>
+    <div class="lab" id="lab-re"></div>
+    <div class="track"><h3>For engineering and delivery teams</h3><p>Design, coordination and site tools that cut rework and speed up approvals.</p></div>
+    <div class="lab" id="labgrid"></div>
+  </div>
+</section>
+
+
+<section class="sec" id="experience">
+  <div class="wrap">
+    <div class="sec-head"><h2>Experience</h2><p>From modelling shop drawings on site to shipping the tools that produce them.</p></div>
+    <div class="xp">
+      <ol class="tl">
+        <li><span class="when">Aug 2025 – present</span><h3>AEC Software Developer / .NET Developer</h3><span class="org">Consultancy Group · BIM & CAD automation, ERP backend</span>
+          <p>Builds AutoCAD and Revit plugins in C#, WPF and MVVM for multidisciplinary teams. Shipped Auto-Dimensioning, the Layers suite, the ACUD Compliance Checker and the MIDP Validator. Builds HR, PM and Payroll backend modules in ASP.NET Core and EF Core.</p></li>
+        <li><span class="when">Dec 2023 – Dec 2024</span><h3>Structural & Infrastructure BIM Engineer</h3><span class="org">Hassan Allam Construction · Cairo</span>
+          <p>Coordinated LOD 400 shop drawings, ran Navisworks clash detection across structure, architecture and MEP, ran model QA/QC, and linked model quantities to the BOQ.</p>
+          <div class="sites"><span class="pill vid">MH3 Triple Marina Hotel – Rosewood</span><span class="pill vid">KAUST Coral Restoration</span></div></li>
+        <li><span class="when">Jul 2023 – Dec 2023</span><h3>BIM Specialist</h3><span class="org">Townd Engineering Consulting · Giza</span>
+          <p>Structural models at LOD 350 and 400 and fabrication-ready shop drawings, refined with fabrication and site teams.</p>
+          <div class="sites"><span class="pill vid">Tour Triangle Skyscraper, Paris</span><span class="pill vid">DuPOD DCB Phase-3 · 12 prototypes > $100K each</span></div></li>
+      </ol>
+      <div>
+        <div class="skills">
+          <div><h4>AEC / BIM development</h4><div class="stack"><span>Revit API</span><span>AutoCAD .NET API</span><span>Navisworks API</span><span>ETABS API</span><span>SAP2000 API</span><span>Dynamo</span><span>Model validation</span><span>Code compliance</span></div></div>
+          <div><h4>BIM workflows</h4><div class="stack"><span>LOD 350/400</span><span>Clash detection</span><span>Sheets & schedules</span><span>QTO / BOQ</span><span>MIDP · ISO 19650</span><span>Revit ↔ ETABS</span></div></div>
+          <div><h4>.NET & web</h4><div class="stack"><span>C#</span><span>.NET 8</span><span>WPF · MVVM</span><span>ASP.NET Core</span><span>EF Core</span><span>SQL Server</span><span>JWT</span><span>Clean Architecture</span><span>xUnit</span></div></div>
+          <div><h4>Platforms</h4><div class="stack"><span>Revit</span><span>AutoCAD</span><span>Civil 3D</span><span>InfraWorks</span><span>ETABS</span><span>SAP2000</span><span>ArcGIS Pro</span><span>BIM 360 / ACC</span><span>Aconex</span><span>Azure</span></div></div>
+        </div>
+        <div class="more" aria-label="Other software projects">
+          <div><b>EzTickets</b><span>Event booking Web API · JWT, roles, repository pattern</span></div>
+          <div><b>ConstructEd</b><span>E-learning platform · ASP.NET Core MVC on Azure</span></div>
+          <div><b>Supplio</b><span>Desktop inventory with restock alerts · WinForms, EF</span></div>
+          <div><b>GeoSketch</b><span>Multi-tab geometric drawing app · WPF, MVVM</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <h2>Let's automate your next bottleneck.</h2>
+      <p>Bring the task your engineers repeat every week. I'll come back with the tool and the hours it saves.</p>
+    </div>
+    <dl>
+      <dt>Email</dt><dd id="em">ahmedomara7472@gmail.com</dd><dd><button class="copy" data-copy="em">Copy</button></dd>
+      <dt>Phone</dt><dd id="ph">+20 105 002 9320</dd><dd><button class="copy" data-copy="ph">Copy</button></dd>
+      <dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/ahmedomara707" target="_blank" rel="noopener">linkedin.com/in/ahmedomara707</a></dd><dd></dd>
+      <dt>GitHub</dt><dd><a href="https://github.com/ahmedem00" target="_blank" rel="noopener">github.com/ahmedem00</a></dd><dd></dd>
+    </dl>
+  </div>
+</section>
+<footer><div class="wrap">© 2026 Ahmed Omara · Visuals marked Illustration, UI concept or Concept explain the tools; screen captures come from the working software. Client and employee details are confidential.</div></footer>
+
+<dialog class="lb" id="lb" aria-label="Image viewer">
+  <img alt="">
+  <div class="lb-bar"><span id="lbcap"></span><button type="button" id="lbclose">Close</button></div>
+</dialog>
+<div class="tip" id="tip" hidden></div>
+
+<script>
+const KIND = {cap:["cap","Screen capture"], ill:["ill","Illustration"], ui:["ill","UI concept"], rec:["ill","Rebuilt from code"]};
+const FILTERS = [["all","All"],["bim","BIM & Revit"],["cad","CAD automation"],["str","Structural"],["ent","Enterprise software"]];
+
+const PROJECTS = [
+{id:"acud",no:"P-01",title:"ACUD Compliance Checker",kicker:"Authority code compliance for Revit and AutoCAD submissions",tags:["bim"],platform:"Revit API · AutoCAD .NET",org:"Consultancy Group",year:"2025–26",
+ problem:"Submissions to ACUD, the authority for Egypt's New Administrative Capital, are reviewed against hundreds of Arabic-language conditions. Rooms, stairs, parking and heights were measured by hand, and a missed condition meant a rejected submission weeks later.",
+ built:["Classified 249 ACUD conditions by building type (residential, educational, commercial) and by how far each can be automated.","Pre-checks stop bad models early: every room tagged, A0 title blocks, a view for every floor and stair.","Automated rules read rooms, stairs and levels through the Revit API, then flag each failing element with a zoom-to link.","Judgement rules go to an expert-in-the-loop queue: the tool measures, the engineer confirms."],
+ kpis:[["249","conditions mapped"],["128","run fully automatically"],["<35 %","manual-check target"]],
+ stack:["C#",".NET","Revit API","AutoCAD .NET API","WPF · MVVM"],chart:true,
+ media:[["acud/acud-01-plan-check.webp","ill","Typical floor, four apartments around a shared core: 65 checks, 4 failures (A-5 bedroom area, A-2 kitchen daylight, A-24 emergency-stair width, A-4 stair separation) and a light well sent to expert review."],["acud/acud-02-pipeline.webp","ill","From rulebook to report. The coverage numbers come from the project's rules workbook."]],
+ video:{anim:"acud",cap:"Check run on one level"},
+ folder:{was:"ACUD Condition.docx and the rules workbook. No visuals.",gal:"Plan-check UI · pipeline & coverage diagram",vid:"Animated check run (canvas)",next:["60–90 s recording of a real check on a sample model","Exported compliance report","Authority comments before vs after on one submission"]}},
+{id:"midp",no:"P-02",title:"MIDP Validator",kicker:"BIM deliverable QA/QC against the Model Information Delivery Plan",tags:["bim"],platform:"WPF desktop · .NET",org:"Consultancy Group",year:"2026",
+ problem:"Before every transmittal, someone scrolls through the MIDP register looking for duplicate numbers, skipped revisions and stray spaces. The worst errors are invisible: a non-breaking space or a hidden Unicode character that makes the CDE reject a file.",
+ built:["A rule engine with 23 pluggable rules in 4 severities, from whitespace and smart quotes to duplicate document numbers and skipped revisions.","Live issue stream with filtering, suggestions and a one-click highlighted Excel export.","Cleans the workbook and renames the PDF and DWG files whose names carry invisible characters.","Title-case fixer that unifies capitalisation across every selected sheet."],
+ kpis:[["≈6 h","saved per user, per project"],["23","validation rules"],["1 019","cells checked in one run"]],
+ stack:["C#",".NET 8","WPF · MVVM","ClosedXML","ISO 19650"],
+ media:[["midp/midp-02-results.webp","cap","Results: 684 errors and 309 warnings in 1 019 cells, each with a suggested fix."],["midp/midp-01-configure.webp","cap","Configure: pick sheets, header row and title column. The rule catalogue sits beside it."],["midp/midp-03-capitalisation.webp","cap","Title capitalisation fixer applied across all selected sheets."],["midp/midp-04-pipeline.webp","ill","Pipeline: workbook in, 23 rules, three outputs (highlighted Excel, cleaned copy, renamed files)."]],
+ folder:{was:"3 screenshots + full source (rule engine, services, MVVM).",gal:"3 captures + pipeline diagram",vid:"None yet",next:["60 s recording: configure → validate → export","Screenshot of the highlighted Excel","Before/after of the renamed PDF folder"]}},
+{id:"bimscope",no:"P-03",title:"BimScope",kicker:"Revit ↔ ETABS structural integration and result visualisation",tags:["str","bim"],platform:"Revit API · ETABS API",org:"Personal R&D",year:"2025",
+ problem:"Structural engineers rebuild the same frame twice: once in Revit for drawings, once in ETABS for analysis. The two drift apart, and results never come back into the model where coordination happens.",
+ built:["Bidirectional sync of columns, beams and floors, mapping Revit types to ETABS sections and materials.","WPF editors for line, area and point loads, load combinations and boundary-condition presets.","Pulls moments, shears and axial forces back from ETABS and draws them as colour-coded diagrams in Revit 3D views.","Clean Architecture with MVVM, so the ETABS adapter can be swapped for SAP2000."],
+ kpis:[["2-way","model sync"],["M · V · N","results in Revit"],["1","model to maintain"]],
+ stack:["C#","Revit API","ETABS API","WPF · MVVM","Clean Architecture"],
+ media:[["bimscope/bs-02-moment-diagrams.webp","cap","Bending moment diagrams drawn on the Revit analytical frame."],["bimscope/bs-03-slab-contours.webp","cap","Slab result contours with values at the analysis points."],["bimscope/bs-06-load-application.webp","cap","Load application: line, area and point loads per case."],["bimscope/bs-10-dataflow.webp","ill","Data flow between Revit, the BimScope core and ETABS."]],
+ folder:{was:"9 small screenshots. The folder name promises a demo video, but none is there yet.",gal:"9 captures + data-flow diagram",vid:"Missing: record it",next:["2–3 min demo: model → push → run → results in Revit","1920 px captures of the moment diagrams and contours","Repo link"]}},
+{id:"layers",no:"P-04",title:"CG Tools for AutoCAD",kicker:"Layer Generator · Layers Merger · Layer Fixer · Raster Embedder",tags:["cad"],platform:"AutoCAD .NET 2023–26",org:"Consultancy Group",year:"2025–26",
+ problem:"Consultant drawings arrive with hundreds of non-standard layers, blocks on the wrong layers and linked logos that break when the file moves. Cleaning them by hand takes hours per package and is never consistent.",
+ built:["Layer Generator creates the company layer set from Excel across a batch of DWGs.","Layers Merger moves every entity from selected layers into one target and purges the rest. Prefix exclusions protect disciplines.","Layer Fixer reads an abbreviation-to-layer map and moves matching blocks with the right ACI colour.","Raster Embedder turns linked title-block images into embedded objects. One WixSharp MSI serves AutoCAD 2023 to 2026."],
+ kpis:[["311","entities merged in one run"],["4","modules, one ribbon tab"],["4","AutoCAD versions"]],
+ stack:["C#","AutoCAD .NET API","WPF · MVVM","Microsoft.Extensions.Hosting","WixSharp"],
+ media:[["layers/ly-before.webp","cap","Before: a consultant plan with mixed, non-standard layers."],["layers/ly-after.webp","cap","After merge: one clean, company-standard layer."],["layers/ly-merger-complete.webp","cap","Merge complete: 311 entities moved, 13 layers deleted, 0 errors."],["layers/ly-02-suite.webp","ill","The suite: four modules, one host, one installer."]],
+ folder:{was:"6 screenshots + full solution (4 modules, installer, DI host).",gal:"6 captures + Layer Fixer UI + suite overview",vid:"None yet",next:["45 s merger recording on a real consultant DWG","Real Layer Fixer and Raster Embedder screenshots","MSI installer screen"]}},
+{id:"autodim",no:"P-05",title:"Auto-Dimensions",kicker:"Columns to grid axes, dimensioned in one command",tags:["cad","str"],platform:"AutoCAD .NET · Revit API",org:"Consultancy Group",year:"2025",
+ problem:"A column setting-out plan needs every column face tied to its grid axis, plus chain and overall dimensions. On a large floor that is hundreds of clicks per sheet, and they all need redoing when the grid moves.",
+ built:["Finds columns and grid axes by layer or category and pairs each column with its nearest axis.","Places face-to-axis, chain and overall dimensions on the standard dim style and layer.","Skips concentric columns where the office standard says so.","The same logic runs in AutoCAD and in Revit structural plans."],
+ kpis:[["1","command per sheet"],["20 → 33","columns → dimensions"],["0","manual edits"]],
+ stack:["C#","AutoCAD .NET API","Revit API","WPF"],
+ media:[["autodim/ad-01-before-after.webp","ill","Before and after on a 5 × 4 grid: chain, overall and face-to-axis dimensions."],["autodim/ad-02-dialog.webp","ui","Plugin dialog: targets, dimension rules and placement settings."],["autodim/ad-03-sheet.webp","ill","Finished setting-out sheet in the title block."]],
+ video:{anim:"autodim",cap:"Dimensions placed column by column"},
+ folder:{was:"Empty.",gal:"Before/after · dialog concept · finished sheet",vid:"Animated run (canvas)",next:["Real before/after DWG screenshots","30 s screen recording of a run","Minutes per sheet, manual vs plugin"]}},
+{id:"gridgen",no:"P-06",title:"Grid Generator",kicker:"Structural grids with bubbles and dimensions from one line of spans",tags:["cad","str"],platform:"AutoCAD .NET",org:"Personal R&D",year:"2025",
+ problem:"Every new building starts with someone drawing grid lines, bubbles and dimension chains by hand, and redrawing them every time a span changes.",
+ built:["Type spans the way engineers write them: 3*6000, 7500, 2*6000.","Live preview of axes, labels and dimension chains before anything is drawn.","Bubbles at both ends, chain and overall dimensions, and labels that skip I and O.","Everything lands on the office's grid and dimension layers."],
+ kpis:[["< 2 s","per grid"],["≈ 25 min","manual equivalent"],["22","bubbles placed"]],
+ stack:["C#","AutoCAD .NET API","WPF"],
+ media:[["gridgen/gg-02-output.webp","ill","Generated grid with chain and overall dimensions."],["gridgen/gg-01-dialog.webp","ui","Spacing input with live preview."]],
+ video:{anim:"gridgen",cap:"From span string to dimensioned grid"},
+ folder:{was:"Empty.",gal:"Dialog concept · generated grid",vid:"Animated run (canvas)",next:["Add the repo link from the CV","Real screenshot of a generated grid","20 s recording"]}},
+{id:"autojoin",no:"P-07",title:"AutoJoin",kicker:"Joins structural elements so quantities are counted once",tags:["bim","str"],platform:"Revit API",org:"Personal R&D",year:"2024",
+ problem:"Where a slab meets a beam or a column, unjoined Revit elements overlap. Every schedule then counts that concrete twice, and the BOQ is wrong before anyone prices it.",
+ built:["Pick a source and a target category: walls, floors, foundations, beams or columns.","A bounding-box pre-filter finds candidate pairs fast, then joins them in one transaction.","Reports pairs joined, already joined and failed.","WPF and MVVM with an external command and a ribbon button."],
+ kpis:[["5","structural categories"],["1","transaction"],["0 m³","double-counted"]],
+ stack:["C#","Revit API","WPF · MVVM"],
+ media:[["autojoin/aj-02-before-after.webp","ill","Why it matters: the overlap is counted twice until the elements are joined."],["autojoin/aj-01-dialog.webp","rec","Join tool dialog, rebuilt from AutoJoinView.xaml."],["autojoin/aj-revit-section.webp","cap","Joined slab and beam in a Revit section."]],
+ folder:{was:"2 tiny Revit captures, auto-join.avi, full source.",gal:"Dialog rebuild · before/after · 2 captures",vid:"auto-join.avi → convert to MP4",next:["Convert the AVI to MP4 (HandBrake or Clipchamp)","3D before/after of joined geometry","Schedule before/after showing the volume fixed"]}},
+{id:"colgen",no:"P-08",title:"Column Auto-Generation",kicker:"AutoCAD outlines to typed Revit columns with Dynamo",tags:["bim","str"],platform:"Dynamo · Revit",org:"Personal R&D",year:"2023",
+ problem:"Modelling columns from consultant CAD means measuring each outline, creating a family type for every size, then placing them one by one.",
+ built:["Reads closed polylines from one layer of the CAD link.","Groups outlines by size and creates the missing family types automatically.","Places columns at outline centres with the right rotation and base and top levels."],
+ kpis:[["3","steps automated"],["0","types made by hand"],["1","graph, reusable"]],
+ stack:["Dynamo","Revit","AutoCAD"],
+ media:[["colgen/cg-01-pipeline.webp","ill","The graph: CAD link → curves → sizes → family types → placed columns."]],
+ folder:{was:"One MP4 recording.",gal:"Pipeline + Dynamo graph illustration",vid:"Your MP4, as is",next:["Three stills from the video: CAD, graph, result","Screenshot of the real .dyn graph","Compress the MP4 below 15 MB for web sharing"]}},
+{id:"erp",no:"P-09",title:"EIONE ERP",kicker:"HR, Project Management and Payroll backend modules",tags:["ent"],platform:"ASP.NET Core · .NET 8",org:"Consultancy Group",year:"2025–26",
+ problem:"An engineering consultancy runs on people, projects and timesheets. Spreadsheets for leave, payroll and project hours don't scale past a few teams and can't feed live delivery dashboards.",
+ built:["HR: employee files, contracts, leave and attendance with multi-stage approvals, fingerprint integration and evaluations.","Payroll: contract-based salaries encrypted per branch, workday-driven runs with leave and overtime rules.","Project Management: WBS from projects to tasks, timesheets with grace-period locking, staffing and delivery dashboards.","REST APIs on a modular monolith with CQRS, EF Core, SignalR and Hangfire."],
+ kpis:[["7","bounded modules"],["EN / AR","with RTL"],["CQRS","MediatR"]],
+ stack:["C#","ASP.NET Core Web API","EF Core","SQL","MediatR","SignalR","Hangfire"],
+ media:[["erp/erp-04-master-projects-monitor.webp","cap","Master projects monitor: daily hours by project and portfolio table."],["erp/erp-02-hr-dashboard.webp","cap","HR dashboard: attendance, contracts, demographics and turnover."],["erp/erp-06-task-board.webp","cap","Task board: to do, in progress, QA review, done."],["erp/erp-10-architecture.webp","ill","Platform architecture and the modules I built."]],
+ folder:{was:"9 screenshots + platform write-up.",gal:"9 captures + architecture diagram",vid:"None yet",next:["Swagger view of the endpoints you built","ER diagram of the HR and Payroll schema","Blur real employee names before public sharing"]}}
+];
+
+const CONCEPTS_RE = [
+ ["lab/plotmax.webp","PlotMax","From plot to feasibility in ten minutes","Enter a plot and its zoning; get ranked massing options with unit mix, parking, GFA, cost and margin. Zoning and parking ratios come from the same rule data as the ACUD Checker.","Land decisions are made in days, usually before an architect is appointed. A fast, rule-correct feasibility study is worth more than a beautiful one next month.","ACUD rule data · Grid Generator · new massing engine","10–12 weeks"],
+ ["lab/arealedger.webp","AreaLedger","Saleable areas you can sign a contract on","Computes net, balcony and common-share area for every unit straight from the model, on every revision, and flags any unit whose area changed since the last contract issue.","Area disputes drive refunds, complaints and legal cost. The model, the contract and the sales sheet should never disagree.","Revit API areas · ACUD/MIDP rule engine · ERP sync","6–8 weeks"],
+ ["lab/unitscope.webp","UnitScope","The sales gallery runs on the BIM model","A web viewer of the tower with live availability, price, view and real plan for every unit. Agents reserve units in one click, and the CRM updates.","Sales teams stop selling from out-of-date PDFs, and management sees sell-through by floor and view in real time.","New build: APS or IFC web viewer + CRM link · ERP backend patterns","10 weeks"],
+ ["lab/snagtrack.webp","SnagTrack","Handover without the spreadsheet","Snags pinned to rooms on a mobile plan, with photos, trade and responsible subcontractor. Closing a snag needs a photo, and readiness rolls up per building.","Faster handovers, fewer repeat visits, and back-charges and retention release backed by evidence.","New build: mobile web app · room data from Revit · ASP.NET Core backend","8 weeks"],
+ ["lab/finishselect.webp","FinishSelect","Finishing upgrades priced from the BOQ","Buyers pick finishing packages per room. Price, instalment change and lead time update live, and the contractor change order is generated from model quantities and contract rates.","Upgrades become a profit line instead of a site headache, and nothing is sold that the site can't deliver in time.","Revit QTO / BOQ linking · ERP approvals · buyer web front end","8–10 weeks"],
+ ["lab/progresspay.webp","ProgressPay","Instalments tied to verified progress","Construction milestones are verified against the model with drone or 360° captures. Buyer instalments and contractor payment certificates are released from the same evidence.","Better collections, fewer buyer disputes about progress, and certified quantities that match the model.","SitePulse 4D · AutoJoin-clean quantities · EIONE ERP payments","12 weeks"]
+];
+const CONCEPTS = [
+ ["lab/ruleforge.webp","RuleForge","Authority code → executable checks","An LLM reads authority clauses in Arabic or English and drafts structured rules. An engineer approves each rule once, and from then on it runs in Revit on every project.","Turns the 116 semi-manual ACUD conditions into automated checks and makes onboarding a new authority's code a matter of weeks.","ACUD Checker · MIDP rule engine · Revit API","8–10 weeks"],
+ ["lab/spansmith.webp","SpanSmith","Generative column-grid optimiser","Generates hundreds of grid layouts around cores and parking modules, sizes each one in ETABS through the API, and plots cost against span.","Settles the structural grid in the first design meeting, with numbers behind it.","Grid Generator · BimScope · ETABS API","10–12 weeks"],
+ ["lab/clashlens.webp","ClashLens","Clash triage for coordination","Groups raw Navisworks clashes by system, level and location into real issues, closes soft clashes, and opens one ACC issue per group with an owner.","Coordination meetings review 86 issues instead of 1 240 clashes.","Navisworks API · ACC · site coordination experience","6–8 weeks"],
+ ["lab/carbonlens.webp","CarbonLens","Embodied carbon while you model","Multiplies live Revit quantities by EPD factors on every sync and runs what-if swaps for concrete mixes and rebar.","Puts carbon next to cost in value engineering, early enough to change the design.","AutoJoin (clean quantities) · QTO/BOQ · Revit API","6 weeks"],
+ ["lab/corridortwin.webp","CorridorTwin","Utility conflicts along road corridors","Overlays Civil 3D corridors with ArcGIS utility layers and checks cover depth and crossings along every chainage.","Finds service clashes on the drawing instead of in the trench.","Civil 3D · InfraWorks · ArcGIS Pro","10 weeks"],
+ ["lab/sitepulse.webp","SitePulse 4D","Planned vs built, every week","Compares drone and 360° captures with the 4D model to mark elements built, then feeds measured progress into the ERP project module.","Directors see progress measured on site rather than typed into a report.","EIONE ERP PM module · Navisworks TimeLiner","12 weeks"]
+];
+
+const $ = (s, r = document) => r.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const kindPill = k => `<span class="pill ${KIND[k][0]}">${KIND[k][1]}</span>`;
+
+function galleryHTML(items, label){
+  const slides = items.map(([src,k,cap],i)=>`<figure class="slide" data-k="${k}" data-cap="${esc(cap)}"><button type="button" aria-label="Open image ${i+1} full size"><img src="media/${src}" alt="${esc(cap)}" loading="${i?'lazy':'eager'}" decoding="async"></button></figure>`).join("");
+  const multi = items.length > 1;
+  return `<div class="gal" aria-roledescription="carousel" aria-label="${esc(label)} gallery">
+    <div class="gal-track" tabindex="0">${slides}</div>
+    <div class="gal-bar"><p class="gal-cap" aria-live="polite"></p>${multi?`<div class="gal-ctl"><button type="button" class="prev" aria-label="Previous image">‹</button><span class="count">1 / ${items.length}</span><button type="button" class="next" aria-label="Next image">›</button></div>`:""}</div>
+    ${multi?`<div class="dots">${items.map((_,i)=>`<button type="button" aria-label="Image ${i+1}"></button>`).join("")}</div>`:""}
+  </div>`;
+}
+
+function videoHTML(v){
+  if (v.anim) return `<div><div class="media-head"><span class="label">Video · ${esc(v.cap)}</span><span class="pill ill">Animated demo · illustration</span></div>
+    <div class="player" data-scene="${v.anim}"><canvas role="img" aria-label="${esc(v.cap)} animation"></canvas>
+    <div class="pbar"><button type="button" class="pp" aria-label="Play">▶</button><input type="range" min="0" max="1000" value="1000" aria-label="Scrub"><span class="time">0.0 s</span></div></div></div>`;
+  return `<div><div class="media-head"><span class="label">Video · ${esc(v.cap)}</span><span class="pill cap">Screen recording</span></div>
+    <div class="vid" style="--poster:url('${v.poster}')"><video controls preload="metadata" playsinline poster="${v.poster}"><source src="${v.src}" type="video/mp4"></video>
+    <div class="vid-miss" hidden><div><b>Recording not embedded here</b><span>${esc(v.note)}</span><code>${esc(v.path)}</code></div></div></div></div>`;
+}
+
+function coverageHTML(){
+  const segs=[[128,"var(--chart-a)","Fully automated"],[116,"var(--chart-b)","Expert in the loop"],[5,"var(--chart-c)","Pending / other"]];
+  const tot=249;
+  return `<div class="cov"><h4>Automation coverage · 249 conditions</h4>
+    <div class="cov-bar" role="img" aria-label="128 fully automated, 116 expert in the loop, 5 pending">${segs.map(([n,c,l])=>`<span style="flex:${n};background:${c}" data-tip="${l}: ${n} (${Math.round(n/tot*100)} %)"></span>`).join("")}</div>
+    <div class="cov-legend">${segs.map(([n,c,l])=>`<span><i style="background:${c}"></i>${l} · ${n}</span>`).join("")}</div>
+    <table aria-label="Conditions by source"><tbody>
+      <tr><td>Educational buildings code</td><td>164</td></tr><tr><td>Housing & Building Research Center</td><td>45</td></tr>
+      <tr><td>Architecture</td><td>28</td></tr><tr><td>Urban planning</td><td>8</td></tr><tr><td>Model pre-checks (added)</td><td>4</td></tr></tbody></table></div>`;
+}
+
+function mediaPills(p){
+  const caps = p.media.filter(m=>m[1]==="cap").length, ills = p.media.length - caps;
+  let s = "";
+  if (caps) s += `<span class="pill cap">${caps} capture${caps>1?"s":""}</span>`;
+  if (ills) s += `<span class="pill ill">${ills} illustration${ills>1?"s":""}</span>`;
+  if (p.video) s += `<span class="pill vid">${p.video.anim?"animated demo":"video"}</span>`;
+  return s;
+}
+
+function render(){
+  $("#filters").innerHTML = FILTERS.map(([k,l],i)=>`<button type="button" class="chip" data-f="${k}" aria-pressed="${i===0}">${l}</button>`).join("");
+  $("#reg tbody").innerHTML = PROJECTS.map(p=>`<tr data-tags="${p.tags.join(" ")}"><td>${p.no}</td><td><a href="#p-${p.id}">${esc(p.title)}</a><span class="sub">${esc(p.kicker)}</span></td><td>${esc(p.org)} · ${p.year}</td><td>${esc(p.platform)}</td><td>${mediaPills(p)}</td></tr>`).join("");
+  $("#projects").innerHTML = PROJECTS.map(p=>`
+  <article class="proj" id="p-${p.id}" data-tags="${p.tags.join(" ")}">
+    <div class="strip">
+      <div class="no">${p.no}</div>
+      <div><h3>${esc(p.title)}</h3><span class="kicker">${esc(p.kicker)}</span></div>
+      <div><span class="k">Platform</span><span class="v">${esc(p.platform)}</span></div>
+      <div><span class="k">Client / org</span><span class="v">${esc(p.org)}</span></div>
+      <div><span class="k">Year</span><span class="v">${p.year}</span></div>
+    </div>
+    <div class="proj-body">
+      <div class="media">${galleryHTML(p.media,p.title)}${p.video?videoHTML(p.video):""}</div>
+      <div class="notes">
+        <div><h4>The problem</h4><p>${esc(p.problem)}</p></div>
+        <div><h4>What I built</h4><ul>${p.built.map(b=>`<li>${esc(b)}</li>`).join("")}</ul></div>
+        <div><h4>Impact</h4><div class="kpis">${p.kpis.map(([a,b])=>`<div><b>${esc(a)}</b><span>${esc(b)}</span></div>`).join("")}</div></div>
+        ${p.chart?coverageHTML():""}
+        <div><h4>Stack</h4><div class="stack">${p.stack.map(s=>`<span>${esc(s)}</span>`).join("")}</div></div>
+      </div>
+    </div>
+  </article>`).join("");
+  const conceptHTML = ([src,name,tag,what,why,builds,mvp])=>`
+  <article class="concept">
+    <figure class="slide" data-k="ill" data-cap="${esc(name+" · "+tag)}"><button type="button" aria-label="Open ${esc(name)} full size"><img src="media/${src}" alt="${esc(name)} concept visual" loading="lazy"></button></figure>
+    <div class="body"><h3><small>Concept</small>${esc(name)}</h3><p><b>${esc(tag)}.</b> ${esc(what)}</p>
+      <dl><dt>Why it matters</dt><dd>${esc(why)}</dd><dt>Starting point</dt><dd>${esc(builds)}</dd><dt>First version</dt><dd>${esc(mvp)}</dd></dl></div>
+  </article>`;
+  $("#lab-re").innerHTML = CONCEPTS_RE.map(conceptHTML).join("");
+  $("#labgrid").innerHTML = CONCEPTS.map(conceptHTML).join("");
+}
+
+function initGallery(g){
+  const track = $(".gal-track", g), slides = [...track.children], cap = $(".gal-cap", g);
+  const dots = g.querySelectorAll(".dots button"), count = $(".count", g), prev = $(".prev", g), next = $(".next", g);
+  let i = 0;
+  const show = n => {
+    i = Math.max(0, Math.min(slides.length - 1, n));
+    const s = slides[i];
+    cap.innerHTML = kindPill(s.dataset.k) + esc(s.dataset.cap);
+    if (count) count.textContent = `${i+1} / ${slides.length}`;
+    dots.forEach((d,k)=>d.setAttribute("aria-current", k===i));
+    if (prev){ prev.disabled = i===0; next.disabled = i===slides.length-1; }
+  };
+  const go = n => { track.scrollTo({left: Math.max(0,Math.min(slides.length-1,n)) * track.clientWidth, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"}); show(n); };
+  let raf; track.addEventListener("scroll", ()=>{ cancelAnimationFrame(raf); raf = requestAnimationFrame(()=>{ const n = Math.round(track.scrollLeft / track.clientWidth); if (n!==i) show(n); }); }, {passive:true});
+  prev && prev.addEventListener("click", ()=>go(i-1));
+  next && next.addEventListener("click", ()=>go(i+1));
+  dots.forEach((d,k)=>d.addEventListener("click", ()=>go(k)));
+  track.addEventListener("keydown", e=>{ if(e.key==="ArrowRight"){e.preventDefault();go(i+1)} if(e.key==="ArrowLeft"){e.preventDefault();go(i-1)} });
+  show(0);
+}
+
+function initLightbox(){
+  const lb = $("#lb"), img = $("img", lb), capEl = $("#lbcap");
+  document.addEventListener("click", e=>{
+    const b = e.target.closest(".slide button"); if (!b) return;
+    const fig = b.closest(".slide"), src = $("img", fig).src;
+    img.src = src; img.alt = fig.dataset.cap; capEl.textContent = fig.dataset.cap;
+    if (lb.showModal) lb.showModal(); else window.open(src, "_blank");
+  });
+  $("#lbclose").addEventListener("click", ()=>lb.close());
+  lb.addEventListener("click", e=>{ if (e.target === lb) lb.close(); });
+}
+
+function initFilters(){
+  $("#filters").addEventListener("click", e=>{
+    const b = e.target.closest(".chip"); if (!b) return;
+    const f = b.dataset.f;
+    document.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed", c===b));
+    document.querySelectorAll("#reg tbody tr, .proj").forEach(el=>{ el.hidden = f!=="all" && !el.dataset.tags.split(" ").includes(f); });
+  });
+}
+
+function initVideos(){
+  document.querySelectorAll("div.vid").forEach(v=>{
+    const src = $("source", v), miss = $(".vid-miss", v), vid = $("video", v);
+    const fail = ()=>{ miss.hidden = false; vid.removeAttribute("controls"); };
+    src.addEventListener("error", fail);
+    vid.addEventListener("error", fail);
+  });
+}
+
+function initTips(){
+  const tip = $("#tip");
+  document.addEventListener("pointermove", e=>{
+    const t = e.target.closest("[data-tip]");
+    if (!t){ tip.hidden = true; return; }
+    tip.textContent = t.dataset.tip; tip.hidden = false;
+    tip.style.left = Math.min(e.clientX + 12, innerWidth - tip.offsetWidth - 8) + "px"; tip.style.top = (e.clientY + 14) + "px";
+  });
+}
+
+function initCopy(){
+  document.querySelectorAll(".copy").forEach(b=>b.addEventListener("click", ()=>{
+    const el = document.getElementById(b.dataset.copy), txt = el.textContent.trim();
+    const done = ()=>{ b.textContent = "Copied"; setTimeout(()=>b.textContent="Copy", 1600); };
+    const select = ()=>{ const r = document.createRange(); r.selectNodeContents(el); const s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = "Selected"; };
+    try { navigator.clipboard.writeText(txt).then(done, select); } catch(_) { select(); }
+  }));
+}
+
+/* ── animated demo scenes (1600 × 1000 drawing space) ─────────────────────── */
+const C = {bg:"#1C2128",grid:"#D0574F",col:"#8B97A6",txt:"#E9EDF2",dim:"#4FC3F7",dim2:"#F2B33D",ok:"#4CC38A",bad:"#F06A5F",mute:"#7F8894",panel:"#232A33",line:"#39414C",gold:"#D9A21B"};
+const MONO = '"IBM Plex Mono", Consolas, monospace', SANS = '"IBM Plex Sans", "Segoe UI", Arial, sans-serif';
+const clamp = (x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+const prog = (t,a,b)=>clamp((t-a)/(b-a));
+const ease = x=>1-Math.pow(1-x,3);
+function txt(g,s,x,y,size,col,{w=400,align="left",font=SANS}={}){ g.font=`${w} ${size}px ${font}`; g.fillStyle=col; g.textAlign=align; g.fillText(s,x,y); }
+function line(g,x1,y1,x2,y2,col,w=1,dash=null){ g.beginPath(); g.setLineDash(dash||[]); g.strokeStyle=col; g.lineWidth=w; g.moveTo(x1,y1); g.lineTo(x2,y2); g.stroke(); g.setLineDash([]); }
+function bubble(g,x,y,l,r=17,a=1){ g.globalAlpha=a; g.beginPath(); g.arc(x,y,r,0,7); g.fillStyle=C.bg; g.fill(); g.strokeStyle=C.txt; g.lineWidth=1.6; g.stroke(); txt(g,l,x,y+6,16,C.txt,{w:600,align:"center"}); g.globalAlpha=1; }
+function dimH(g,x1,x2,y,ext,label,col,size=13,a=1){ if(a<=0)return; g.globalAlpha=a; const d=ext>y?-6:6; line(g,x1,ext,x1,y+d,col,.9); line(g,x2,ext,x2,y+d,col,.9); line(g,x1-6,y,x2+6,y,col,1.1); [x1,x2].forEach(x=>line(g,x-5,y+5,x+5,y-5,col,2)); txt(g,label,(x1+x2)/2,y-6,size,col,{w:500,align:"center",font:MONO}); g.globalAlpha=1; }
+function dimV(g,y1,y2,x,ext,label,col,size=13,a=1){ if(a<=0)return; g.globalAlpha=a; const d=ext<x?6:-6; line(g,ext,y1,x+d,y1,col,.9); line(g,ext,y2,x+d,y2,col,.9); line(g,x,y1-6,x,y2+6,col,1.1); [y1,y2].forEach(y=>line(g,x-5,y+5,x+5,y-5,col,2)); g.save(); g.translate(x-7,(y1+y2)/2); g.rotate(-Math.PI/2); txt(g,label,0,0,size,col,{w:500,align:"center",font:MONO}); g.restore(); g.globalAlpha=1; }
+function cadFrame(g,title,cmd){ g.fillStyle=C.bg; g.fillRect(0,0,1600,1000); g.fillStyle="#2B3036"; g.fillRect(0,0,1600,54); txt(g,title,20,34,15,"#C9CED6",{w:600}); txt(g,"CG Tools",1480,34,14,C.gold,{w:700}); g.fillStyle="#252A30"; g.fillRect(0,960,1600,40); txt(g,"Command: "+cmd,20,986,15,"#C9CED6",{font:MONO}); }
+const fmt = n=>n.toLocaleString("en-US").replace(/,/g," ");
+
+const ACUD = {"rooms":[[0,0,6,6,"RECEPTION","36.0 m²","pass",""],[6,0,10,4,"BEDROOM 1","16.0 m²","pass",""],[10,0,12,2.6,"BATH","5.2 m²","pass",""],[10,2.6,12,4,"WC","2.8 m²","pass",""],[12,0,14,6,"KITCHEN","12.0 m²","pass",""],[6,4,12,6,"HALL","12.0 m²","na",""],[0,6,5,11,"BEDROOM 2","25.0 m²","pass",""],[5,6,7.6,8.65,"BEDROOM 3","6.9 m²","fail","A-5 · 6.9 < 7.5 m²"],[5,8.65,7.6,11,"DRESS","6.1 m²","na",""],[7.6,6,12,11,"MASTER","22.0 m²","pass",""],[26,0,32,6,"RECEPTION","36.0 m²","pass",""],[22,0,26,4,"BEDROOM 1","16.0 m²","pass",""],[20,0,22,2.6,"BATH","5.2 m²","pass",""],[20,2.6,22,4,"WC","2.8 m²","pass",""],[18,0,20,6,"KITCHEN","12.0 m²","fail","A-2 · window 8 %"],[20,4,26,6,"HALL","12.0 m²","na",""],[27,6,32,11,"BEDROOM 2","25.0 m²","pass",""],[24.4,6,27,11,"BEDROOM 3","13.0 m²","pass",""],[20,6,24.4,11,"MASTER","22.0 m²","pass",""],[0,16,6,22,"RECEPTION","36.0 m²","pass",""],[6,18,10,22,"BEDROOM 1","16.0 m²","pass",""],[10,19.4,12,22,"BATH","5.2 m²","pass",""],[10,18,12,19.4,"WC","2.8 m²","pass",""],[12,16,14,22,"KITCHEN","12.0 m²","pass",""],[6,16,12,18,"HALL","12.0 m²","na",""],[0,11,5,16,"BEDROOM 2","25.0 m²","pass",""],[5,11,7.6,16,"BEDROOM 3","13.0 m²","pass",""],[7.6,11,12,16,"MASTER","22.0 m²","pass",""],[26,16,32,22,"RECEPTION","36.0 m²","pass",""],[22,18,26,22,"BEDROOM 1","16.0 m²","pass",""],[20,19.4,22,22,"BATH","5.2 m²","pass",""],[20,18,22,19.4,"WC","2.8 m²","pass",""],[18,16,20,22,"KITCHEN","12.0 m²","pass",""],[20,16,26,18,"HALL","12.0 m²","na",""],[27,11,32,16,"BEDROOM 2","25.0 m²","pass",""],[24.4,11,27,16,"BEDROOM 3","13.0 m²","pass",""],[20,11,24.4,16,"MASTER","22.0 m²","pass",""],[12,6,15,11,"MAIN STAIR","w 1.30 m","pass",""],[15,6,17.5,8.4,"LIFT 1","","na",""],[17.5,6,20,8.4,"LIFT 2","","na",""],[15,8.4,20,11,"LOBBY","13.0 m²","na",""],[12,11,20,13,"CORRIDOR","16.0 m²","na",""],[12,13,16.4,16,"ELEC.","","na",""],[16.4,13,20,16,"EMERG. STAIR","w 1.00 m","fail","A-24 · 1.00 < 1.10 m"],[14,0,18,3,"LIGHT WELL","4.0 × 3.0 m","well",""],[14,3,18,6,"SHAFT","","na",""],[14,16,18,19,"SHAFT","","na",""],[14.8,19,17.2,22,"POCKET WELL","2.4 × 3.0 m","review","A-11 · review"]],"apts":[["APT A · 3 BR · 144 m²",0,-0.55],["APT B · 3 BR · 144 m²",24.2,-0.55],["APT C · 3 BR · 144 m²",0,22.95],["APT D · 3 BR · 144 m²",24.2,22.95]],"sep":[13.5,8.5,18.2,14.5,"A-4 · 7.6 m < 10 m"],"grid_x":[0,6,12,20,26,32],"grid_y":[0,6,11,16,22]};
+const SCENES = {
+ autodim:{dur:9,draw(g,t){
+   const sx=[6000,7500,6000,7500], sy=[6000,6000,5000], sc=.033, cm=1.9, x0=330, y0=290;
+   const xs=[x0]; sx.forEach(s=>xs.push(xs.at(-1)+s*sc)); const ys=[y0]; sy.forEach(s=>ys.push(ys.at(-1)+s*sc));
+   const typed="CGAUTODIM".slice(0,Math.floor(prog(t,0,.9)*9));
+   cadFrame(g,"Level 01 – Structural GA Plan.dwg", typed+(t<1&&Math.floor(t*4)%2?"_":""));
+   xs.forEach((x,i)=>{ line(g,x,ys[0]-40,x,ys.at(-1)+24,C.grid,1,[18,5,3,5]); bubble(g,x,ys[0]-58,"ABCDE"[i]); });
+   ys.forEach((y,j)=>{ line(g,xs[0]-40,y,xs.at(-1)+24,y,C.grid,1,[18,5,3,5]); bubble(g,xs[0]-58,y,"1234"[j]); });
+   const OFF={"0,0":[200,300],"4,0":[-200,300],"0,3":[200,-300],"4,3":[-200,-300],"1,0":[0,300],"2,0":[0,300],"3,0":[0,300],"1,3":[0,-300],"2,3":[0,-300],"3,3":[0,-300],"0,1":[200,0],"0,2":[200,0],"4,1":[-200,0],"4,2":[-200,0]};
+   const cw=400*sc*cm, ch=600*sc*cm, cols=[];
+   for(let j=0;j<ys.length;j++) for(let i=0;i<xs.length;i++){ const o=OFF[i+","+j]||[0,0]; cols.push({i,j,ox:o[0],oy:o[1],cx:xs[i]+o[0]*sc*cm,cy:ys[j]+o[1]*sc*cm}); }
+   const sel = prog(t,1,1.5), per = 3.6/cols.length; let placed=0;
+   cols.forEach((c,k)=>{
+     const a = prog(t,1.6+k*per,1.6+(k+1)*per);
+     g.fillStyle="#3A4452"; g.fillRect(c.cx-cw/2,c.cy-ch/2,cw,ch);
+     g.strokeStyle = sel>0 && sel<1 ? C.dim : C.col; g.lineWidth = 1.3; g.strokeRect(c.cx-cw/2,c.cy-ch/2,cw,ch);
+     if (a>0){
+       if (c.ox){ const f=c.ox>0?c.cx+cw/2:c.cx-cw/2; dimH(g,Math.min(xs[c.i],f),Math.max(xs[c.i],f),c.cy+ch/2+16,c.cy+ch/2,"400",C.dim,11,a); placed++; }
+       if (c.oy){ const f=c.oy>0?c.cy+ch/2:c.cy-ch/2; dimV(g,Math.min(ys[c.j],f),Math.max(ys[c.j],f),c.cx+cw/2+16,c.cx+cw/2,"600",C.dim,11,a); placed++; }
+       if (!c.ox && !c.oy){ dimH(g,c.cx-cw/2,xs[c.i],c.cy+ch/2+16,c.cy+ch/2,"200",C.dim,11,a); placed++; }
+     }
+     if (a>0 && a<1){ g.strokeStyle=C.dim2; g.lineWidth=1; g.beginPath(); g.arc(c.cx,c.cy,26,0,7); g.stroke(); line(g,c.cx-40,c.cy,c.cx+40,c.cy,C.dim2,1); line(g,c.cx,c.cy-40,c.cx,c.cy+40,C.dim2,1); }
+   });
+   const ca = prog(t,5.4,6.6), oa = prog(t,6.8,7.4); let chains=0;
+   for(let i=0;i<sx.length;i++){ const a=clamp(ca*sx.length-i); if(a>0)chains++; dimH(g,xs[i],xs[i+1],ys[0]-104,ys[0]-80,fmt(sx[i]),C.dim2,14,a); }
+   for(let j=0;j<sy.length;j++){ const a=clamp(ca*sy.length-j); if(a>0)chains++; dimV(g,ys[j],ys[j+1],xs[0]-108,xs[0]-80,fmt(sy[j]),C.dim2,14,a); }
+   dimH(g,xs[0],xs.at(-1),ys[0]-144,ys[0]-98,fmt(27000),C.dim2,15,oa); dimV(g,ys[0],ys.at(-1),xs[0]-148,xs[0]-102,fmt(17000),C.dim2,15,oa);
+   g.fillStyle=C.panel; g.fillRect(1300,110,270,330); g.strokeStyle=C.line; g.strokeRect(1300,110,270,330);
+   txt(g,"CGAUTODIM",1320,146,14,"#AEB4BD",{w:700});
+   [["Columns",cols.length],["Face dims",placed],["Chain dims",chains],["Overall",oa>0?2:0]].forEach(([k,v],n)=>{ txt(g,k,1320,190+n*62,13,C.mute); txt(g,String(v),1320,216+n*62,24,C.txt,{w:600,font:MONO}); });
+   const done = prog(t,7.6,8.1);
+   if (done>0){ g.globalAlpha=done; g.fillStyle="#173326"; g.fillRect(330,880,660,46); g.strokeStyle=C.ok; g.strokeRect(330,880,660,46); txt(g,`✓ ${placed+chains+2} dimensions on S-DIMS · 0 manual edits`,350,910,16,C.ok,{w:600,font:MONO}); g.globalAlpha=1; }
+ }},
+ gridgen:{dur:8.5,draw(g,t){
+   cadFrame(g,"Tower B – Grid Layout.dwg", t<3?"CGGRID":"");
+   const sxs=[6000,6000,6000,7500,6000,6000], sys=[6000,7500,7500,5000], sc=.0235, x0=640, y0=300;
+   const xs=[x0]; sxs.forEach(s=>xs.push(xs.at(-1)+s*sc)); const ys=[y0]; sys.forEach(s=>ys.push(ys.at(-1)+s*sc));
+   g.fillStyle="#1F2023"; g.fillRect(40,90,440,420); g.strokeStyle="#3A3C42"; g.strokeRect(40,90,440,420);
+   txt(g,"Grid Generator",64,132,20,C.gold,{w:700});
+   const fx="3*6000, 7500, 2*6000", fy="6000, 2*7500, 5000";
+   [["X spans",fx,prog(t,.2,1.4)],["Y spans",fy,prog(t,1.4,2.3)],["X labels","A, B, C …",1],["Y labels","1, 2, 3 …",1]].forEach(([k,v,p],n)=>{
+     const y=180+n*70; txt(g,k,64,y,14,"#9A9DA4"); g.fillStyle="#1B1C1F"; g.fillRect(64,y+10,392,36); g.strokeStyle=p>0&&p<1?C.gold:"#3A3C42"; g.strokeRect(64,y+10,392,36);
+     txt(g,v.slice(0,Math.round(v.length*p)),76,y+34,15,n<2?C.gold:C.txt,{w:600,font:MONO}); });
+   const gb = prog(t,2.4,2.8); g.globalAlpha=.4+.6*gb; g.fillStyle=C.gold; g.fillRect(300,456,156,40); txt(g,"Generate",378,482,15,"#1A1A1A",{w:700,align:"center"}); g.globalAlpha=1;
+   const lp = prog(t,2.8,4.6), nL = xs.length+ys.length;
+   xs.forEach((x,i)=>{ const a=ease(clamp(lp*nL-i)); if(a<=0)return; line(g,x,ys[0]-50,x,ys[0]-50+(ys.at(-1)-ys[0]+80)*a,C.grid,1.1,[18,5,3,5]); });
+   ys.forEach((y,j)=>{ const a=ease(clamp(lp*nL-xs.length-j)); if(a<=0)return; line(g,xs[0]-50,y,xs[0]-50+(xs.at(-1)-xs[0]+80)*a,y,C.grid,1.1,[18,5,3,5]); });
+   const bp = prog(t,4.6,5.6);
+   xs.forEach((x,i)=>{ const a=clamp(bp*xs.length-i); if(a>0){ bubble(g,x,ys[0]-68,"ABCDEFG"[i],17,a); bubble(g,x,ys.at(-1)+48,"ABCDEFG"[i],17,a);} });
+   ys.forEach((y,j)=>{ const a=clamp(bp*ys.length-j); if(a>0){ bubble(g,xs[0]-68,y,String(j+1),17,a); bubble(g,xs.at(-1)+48,y,String(j+1),17,a);} });
+   const dp = prog(t,5.6,7);
+   sxs.forEach((s,i)=>dimH(g,xs[i],xs[i+1],ys[0]-116,ys[0]-90,fmt(s),C.dim,13,clamp(dp*sxs.length-i)));
+   sys.forEach((s,j)=>dimV(g,ys[j],ys[j+1],xs[0]-118,xs[0]-90,fmt(s),C.dim,13,clamp(dp*sys.length-j)));
+   const op = prog(t,7,7.6); dimH(g,xs[0],xs.at(-1),ys[0]-152,ys[0]-110,fmt(37500),C.dim2,14,op); dimV(g,ys[0],ys.at(-1),xs[0]-156,xs[0]-112,fmt(26000),C.dim2,14,op);
+   const done = prog(t,7.7,8.1); if(done>0){ g.globalAlpha=done; g.fillStyle="#173326"; g.fillRect(40,540,440,100); g.strokeStyle=C.ok; g.strokeRect(40,540,440,100); txt(g,"✓ 7 × 5 axes · 24 bubbles",60,580,16,C.ok,{w:600,font:MONO}); txt(g,"  10 chain + 2 overall dims",60,612,16,C.ok,{w:600,font:MONO}); g.globalAlpha=1; }
+ }},
+ acud:{dur:11,draw(g,t){
+   const S=29, X=m=>80+m*S, Y=m=>225+m*S, ink="#2A2F36";
+   const FILL={pass:"#E3F4EA",fail:"#FCE4E2",review:"#FDF0D5",na:"#F1F3F5",well:"#E3EFF8"}, EDGE={pass:"#2E9E62",fail:"#D2453B",review:"#C27C0E",na:"#9AA3AD",well:"#1F6FB2"};
+   g.fillStyle="#F5F6F7"; g.fillRect(0,0,1600,1000); g.fillStyle="#2D3E50"; g.fillRect(0,0,1600,50); txt(g,"Revit · Residential Block 4 – Typical Floor (L02–L06)",20,32,15,"#E6EBF0",{w:600});
+   g.fillStyle="#FFFFFF"; g.fillRect(0,50,1060,950);
+   ACUD.grid_x.forEach((v,k)=>{ line(g,X(v),Y(0)-78,X(v),Y(22)+12,"#C0392B",.8,[14,4,3,4]); g.beginPath(); g.arc(X(v),Y(0)-92,12,0,7); g.fillStyle="#FFF"; g.fill(); g.strokeStyle=ink; g.lineWidth=1.2; g.stroke(); txt(g,"ABCDEF"[k],X(v),Y(0)-87,12,ink,{w:700,align:"center"}); });
+   ACUD.grid_y.forEach((v,k)=>{ line(g,X(0)-30,Y(v),X(32)+12,Y(v),"#C0392B",.8,[14,4,3,4]); g.beginPath(); g.arc(X(0)-44,Y(v),12,0,7); g.fillStyle="#FFF"; g.fill(); g.strokeStyle=ink; g.lineWidth=1.2; g.stroke(); txt(g,String(k+1),X(0)-44,Y(v)+5,12,ink,{w:700,align:"center"}); });
+   const sx = X(0) + prog(t,1.2,7)*32*S, seen = x2 => sx > X(x2) - 4, pills = [];
+   txt(g,t<1.2?"Run ACUD check · Residential …":t<7?"Checking rooms, stairs, light wells and separation":"Check complete · 65 checks",80,95,15,"#57606B",{w:600});
+   let pass=0, fail=0, rev=0;
+   ACUD.rooms.forEach(([x1,y1,x2,y2,nm,lab,st,rule])=>{
+     const done = seen((x1+x2)/2), w=(x2-x1)*S, h=(y2-y1)*S, cx=X(x1)+w/2, cy=Y(y1)+h/2;
+     g.fillStyle = done ? FILL[st] : "#EEF0F2"; g.fillRect(X(x1),Y(y1),w,h); g.strokeStyle=ink; g.lineWidth=2.2; g.strokeRect(X(x1),Y(y1),w,h);
+     if (done && st!=="na"){ g.setLineDash([5,3]); g.strokeStyle=EDGE[st]; g.lineWidth=1.1; g.strokeRect(X(x1)+5,Y(y1)+5,w-10,h-10); g.setLineDash([]); st==="pass"?pass++:st==="fail"?fail++:st==="review"?rev++:0; }
+     if (nm.includes("STAIR")) for(let k=1;k<h/9;k++) line(g,X(x1)+4,Y(y1)+k*9,X(x2)-4,Y(y1)+k*9,"#B3BAC2",.8);
+     if (nm.startsWith("LIFT")){ line(g,X(x1)+6,Y(y1)+6,X(x2)-6,Y(y2)-6,"#8D96A1",.8); line(g,X(x2)-6,Y(y1)+6,X(x1)+6,Y(y2)-6,"#8D96A1",.8); }
+     const small = w<75||h<60, off = rule?8:0;
+     if (nm==="SHAFT"||nm.startsWith("LIFT")) txt(g,nm.replace("LIFT ","L"),cx,cy+4,9,"#6B7480",{w:600,align:"center"});
+     else { txt(g,nm,cx,cy-off-2,small?9:11,ink,{w:700,align:"center"}); if(lab) txt(g,lab,cx,cy-off+11,small?9:10,"#57606B",{align:"center",font:MONO}); }
+     if (rule && done) pills.push([cx,cy,rule,st]);
+   });
+   g.strokeStyle=ink; g.lineWidth=5; g.strokeRect(X(0),Y(0),32*S,22*S);
+   pills.forEach(([cx,cy,rule,st])=>{ const pw=10+rule.length*5.4; g.fillStyle=st==="fail"?"#D2453B":"#B26A00"; g.beginPath(); g.roundRect(cx-pw/2,cy+14,pw,17,8.5); g.fill(); txt(g,rule,cx,cy+26,9.5,"#FFFFFF",{w:700,align:"center"}); });
+   ACUD.apts.forEach(([nm,ax,ay])=>txt(g,nm,X(ax),Y(ay)+4,12,"#1F6FB2",{w:700}));
+   const sp = ACUD.sep, sa = prog(t,4.9,5.6);
+   if (sa>0){ g.globalAlpha=sa; line(g,X(sp[0]),Y(sp[1]),X(sp[2]),Y(sp[3]),"#D2453B",2,[7,4]); const mx=(X(sp[0])+X(sp[2]))/2, my=(Y(sp[1])+Y(sp[3]))/2; g.fillStyle="#D2453B"; g.beginPath(); g.roundRect(mx+8,my-12,128,20,10); g.fill(); txt(g,sp[4],mx+72,my+2,10,"#FFFFFF",{w:700,align:"center"}); g.globalAlpha=1; }
+   if (t>1.2 && t<7.1){ g.fillStyle="rgba(0,154,142,.12)"; g.fillRect(sx-44,Y(0)-4,44,22*S+8); line(g,sx,Y(0)-14,sx,Y(22)+14,"#009A8E",2.5); }
+   g.fillStyle="#1F2329"; g.fillRect(1080,50,520,950);
+   txt(g,"ACUD Compliance Checker",1104,96,20,"#FFFFFF",{w:700}); txt(g,"Residential · typical floor",1104,120,13,"#9AA4AF");
+   const s = prog(t,7,8.4), vals=[Math.round(pass+(58-pass)*s), fail, Math.round(rev+(3-rev)*s)];
+   [["Pass",C.ok],["Fail",C.bad],["Expert review",C.dim2]].forEach(([l,c],k)=>{ const x=1104+k*158; g.fillStyle="#2A3039"; g.fillRect(x,144,146,80); txt(g,String(vals[k]),x+14,182,28,c,{w:700,font:MONO}); txt(g,l,x+14,208,13,"#C9CED6"); });
+   const items=[["A-5","Apt A · Bedroom 3 · 6.9 m² < 7.5 m²","fail",6.3],["A-3","Main stair · 1.30 m ≥ 1.10 m","pass",13.6],["A-11","Pocket well · engineer to confirm","review",16],["A-24","Emergency stair · 1.00 m < 1.10 m","fail",18.2],["A-4","Stairs 7.6 m apart · need 10 m","fail",18.6],["A-2","Apt B · Kitchen window 8 % < 10 %","fail",19.2]];
+   items.filter(it=>seen(it[3])).forEach(([id,msg,st],k)=>{ const y=244+k*106, c=st==="pass"?C.ok:st==="fail"?C.bad:C.dim2; g.fillStyle="#2A3039"; g.fillRect(1104,y,472,94); g.fillStyle=c; g.fillRect(1104,y,5,94); txt(g,id,1124,y+34,16,"#FFFFFF",{w:700,font:MONO}); txt(g,st.toUpperCase(),1556,y+34,12,c,{w:800,align:"right"}); txt(g,msg,1124,y+70,14,"#C9CED6",{font:MONO}); });
+   const d = prog(t,9,9.6); if(d>0){ g.globalAlpha=d; g.fillStyle="#009A8E"; g.fillRect(1104,894,472,52); txt(g,"Export submission report",1340,927,16,"#FFFFFF",{w:700,align:"center"}); g.globalAlpha=1; }
+ }}
+};
+
+function initPlayers(){
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  document.querySelectorAll(".player").forEach(el=>{
+    const sc = SCENES[el.dataset.scene], cv = $("canvas", el), g = cv.getContext("2d"), btn = $(".pp", el), rng = $("input", el), tm = $(".time", el);
+    let t = sc.dur, playing = false, last = 0, started = false;
+    const draw = ()=>{ const s = cv.width/1600; g.setTransform(s,0,0,s,0,0); sc.draw(g,t); rng.value = Math.round(t/sc.dur*1000); tm.textContent = `${t.toFixed(1)} / ${sc.dur.toFixed(1)} s`; };
+    const size = ()=>{ const w = cv.clientWidth || 800, d = Math.min(2, devicePixelRatio || 1); cv.width = Math.round(w*d); cv.height = Math.round(w*d*0.625); draw(); };
+    const loop = now=>{ if(!playing) return; t = Math.min(sc.dur, t + (now-last)/1000); last = now; draw(); if (t>=sc.dur){ playing=false; btn.textContent="↻"; btn.setAttribute("aria-label","Replay"); } else requestAnimationFrame(loop); };
+    const play = ()=>{ if (t>=sc.dur) t = 0; playing = true; started = true; btn.textContent="❚❚"; btn.setAttribute("aria-label","Pause"); last = performance.now(); requestAnimationFrame(loop); };
+    const pause = ()=>{ playing = false; btn.textContent="▶"; btn.setAttribute("aria-label","Play"); };
+    btn.addEventListener("click", ()=> playing ? pause() : play());
+    rng.addEventListener("input", ()=>{ pause(); t = rng.value/1000*sc.dur; draw(); });
+    size();
+    new ResizeObserver(size).observe(cv);
+    if (!reduce && "IntersectionObserver" in window){
+      new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting && !started) play(); }),{threshold:.55}).observe(el);
+    }
+    document.fonts && document.fonts.ready.then(draw);
+  });
+}
+
+render();
+document.querySelectorAll(".gal").forEach(initGallery);
+initLightbox(); initFilters(); initVideos(); initTips(); initCopy(); initPlayers();
+</script>
+
+</body>
+</html>
