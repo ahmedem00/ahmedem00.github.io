@@ -3,14 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Ahmed Omara · AEC Software Developer & BIM Engineer</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%2730%27 fill=%27%2312161C%27/%3E%3Ctext x=%2732%27 y=%2741%27 font-family=%27monospace%27 font-size=%2724%27 font-weight=%27700%27 fill=%27%233CC4BA%27 text-anchor=%27middle%27%3EAO%3C/text%3E%3C/svg%3E">
-<meta property="og:title" content="Ahmed Omara · AEC Software Developer & BIM Engineer">
-<meta property="og:description" content="Revit and AutoCAD automation, code compliance, structural integration and enterprise software for engineering teams.">
-<meta property="og:image" content="media/hero/hex-acud.webp">
 <style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
 <body>
+<title>Ahmed Omara · AEC Software</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Portfolio of Ahmed Omara, AEC software developer and BIM engineer: Revit and AutoCAD automation, code compliance, structural integration and enterprise software.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -87,15 +83,6 @@ a{color:var(--accent)}
 .tblock .full{grid-column:1/-1}
 .tblock .head{background:var(--ink);color:var(--paper);padding:10px 14px;display:flex;justify-content:space-between;gap:12px;font-weight:600;letter-spacing:.06em}
 
-.hero-side{display:grid;gap:18px}
-.hexes{display:flex;justify-content:flex-end;gap:0;margin-bottom:-6px}
-.hexes img{width:min(46%,230px);filter:drop-shadow(0 10px 18px rgba(0,0,0,.18));transition:transform .4s}
-.hexes img:nth-child(2){margin-left:-6%;margin-top:22%}
-.hexes img:hover{transform:translateY(-4px) rotate(-2deg)}
-@media (max-width:900px){.hexes{justify-content:center}}
-.proj,.concept{transition:box-shadow .25s,transform .25s}
-.proj:hover{box-shadow:8px 8px 0 color-mix(in srgb,var(--accent) 35%,transparent)}
-.concept:hover{box-shadow:6px 6px 0 color-mix(in srgb,var(--accent) 35%,transparent);transform:translateY(-2px)}
 /* impact strip */
 .impact{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border:1.5px solid var(--ink);background:var(--sheet);margin-top:40px}
 @media (max-width:1000px){.impact{grid-template-columns:repeat(3,minmax(0,1fr))}}
@@ -287,6 +274,7 @@ dialog.lb button{background:#E6EAEE;color:#0B0E12;border:0;padding:8px 14px;font
     <ul>
       <li><a href="#register">Projects</a></li>
       <li><a href="#lab">Innovation lab</a></li>
+      <li><a href="#blueprint">Folder plan</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -307,8 +295,6 @@ dialog.lb button{background:#E6EAEE;color:#0B0E12;border:0;padding:8px 14px;font
           <a class="btn" href="https://github.com/ahmedem00" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
-      <div class="hero-side">
-      <div class="hexes" aria-hidden="true"><img src="media/hero/hex-acud.webp" alt=""><img src="media/hero/hex-grid.webp" alt=""></div>
       <div class="tblock" aria-label="Profile summary">
         <div class="head"><span>PROFILE</span><span>SHEET 00 · REV 2026</span></div>
         <div class="row"><div class="cell"><span class="k">Role</span><span class="v">AEC Software / .NET Developer</span></div><div class="cell"><span class="k">Current</span><span class="v">Consultancy Group</span></div></div>
@@ -316,7 +302,6 @@ dialog.lb button{background:#E6EAEE;color:#0B0E12;border:0;padding:8px 14px;font
         <div class="row"><div class="cell"><span class="k">BIM</span><span class="v">LOD 350/400 · clash · QA/QC · ISO 19650</span></div><div class="cell"><span class="k">APIs</span><span class="v">Revit · AutoCAD · Navisworks · ETABS · SAP2000</span></div></div>
         <div class="row"><div class="cell"><span class="k">Software</span><span class="v">C# · .NET 8 · WPF/MVVM · ASP.NET Core · EF Core</span></div><div class="cell"><span class="k">Education</span><span class="v">B.Sc. Civil Eng. · ITI AEC Informatics</span></div></div>
         <div class="row"><div class="cell full"><span class="k">Site projects</span><span class="v">Rosewood MH3 Triple Marina · KAUST Coral Restoration · Tour Triangle, Paris · DuPOD DCB Ph-3</span></div></div>
-      </div>
       </div>
     </div>
 
@@ -335,7 +320,7 @@ dialog.lb button{background:#E6EAEE;color:#0B0E12;border:0;padding:8px 14px;font
   <div class="wrap">
     <div class="sec-head">
       <h2>Drawing register</h2>
-      <p>Nine projects, numbered like a drawing set. Each sheet carries screen captures from the working tools, explanatory illustrations and, where it helps, an animated walkthrough.</p>
+      <p>Nine projects, numbered like a drawing set. Pills show what each sheet carries: screen captures, illustrations made for this portfolio, and video.</p>
     </div>
     <div class="filters" role="group" aria-label="Filter projects" id="filters"></div>
     <div class="reg-wrap"><table class="reg" id="reg"><thead><tr><th>No.</th><th>Title</th><th>Scope</th><th>Platform</th><th>Media on sheet</th></tr></thead><tbody></tbody></table></div>
@@ -356,6 +341,15 @@ dialog.lb button{background:#E6EAEE;color:#0B0E12;border:0;padding:8px 14px;font
   </div>
 </section>
 
+<section class="sec" id="blueprint">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Folder plan</h2>
+      <p>What each project folder held, what this portfolio added, and the captures that would make each sheet stronger. Generated visuals are saved in each folder under <span class="mono">Generated Visuals</span>.</p>
+    </div>
+    <div class="bp-wrap"><table class="bp" id="bp"><thead><tr><th>Folder</th><th>Was in the folder</th><th>Gallery (swipe)</th><th>Video player</th><th>Capture next</th></tr></thead><tbody></tbody></table></div>
+  </div>
+</section>
 
 <section class="sec" id="experience">
   <div class="wrap">
@@ -403,7 +397,7 @@ dialog.lb button{background:#E6EAEE;color:#0B0E12;border:0;padding:8px 14px;font
     </dl>
   </div>
 </section>
-<footer><div class="wrap">© 2026 Ahmed Omara · Visuals marked Illustration, UI concept or Concept explain the tools; screen captures come from the working software. Client and employee details are confidential.</div></footer>
+<footer><div class="wrap">Visuals marked Illustration, UI concept or Concept were drawn for this portfolio. Screen captures come from the working tools. Client and employee details are confidential.</div></footer>
 
 <dialog class="lb" id="lb" aria-label="Image viewer">
   <img alt="">
@@ -421,7 +415,7 @@ const PROJECTS = [
  built:["Classified 249 ACUD conditions by building type (residential, educational, commercial) and by how far each can be automated.","Pre-checks stop bad models early: every room tagged, A0 title blocks, a view for every floor and stair.","Automated rules read rooms, stairs and levels through the Revit API, then flag each failing element with a zoom-to link.","Judgement rules go to an expert-in-the-loop queue: the tool measures, the engineer confirms."],
  kpis:[["249","conditions mapped"],["128","run fully automatically"],["<35 %","manual-check target"]],
  stack:["C#",".NET","Revit API","AutoCAD .NET API","WPF · MVVM"],chart:true,
- media:[["acud/acud-01-plan-check.webp","ill","Typical floor, four apartments around a shared core: 65 checks, 4 failures (A-5 bedroom area, A-2 kitchen daylight, A-24 emergency-stair width, A-4 stair separation) and a light well sent to expert review."],["acud/acud-02-pipeline.webp","ill","From rulebook to report. The coverage numbers come from the project's rules workbook."]],
+ media:[["acud/acud-01-plan-check.svg","ill","Typical floor, four apartments around a shared core: 65 checks, 4 failures (A-5 bedroom area, A-2 kitchen daylight, A-24 emergency-stair width, A-4 stair separation) and a light well sent to expert review."],["acud/acud-02-pipeline.svg","ill","From rulebook to report. The coverage numbers come from the project's rules workbook."]],
  video:{anim:"acud",cap:"Check run on one level"},
  folder:{was:"ACUD Condition.docx and the rules workbook. No visuals.",gal:"Plan-check UI · pipeline & coverage diagram",vid:"Animated check run (canvas)",next:["60–90 s recording of a real check on a sample model","Exported compliance report","Authority comments before vs after on one submission"]}},
 {id:"midp",no:"P-02",title:"MIDP Validator",kicker:"BIM deliverable QA/QC against the Model Information Delivery Plan",tags:["bim"],platform:"WPF desktop · .NET",org:"Consultancy Group",year:"2026",
@@ -429,28 +423,28 @@ const PROJECTS = [
  built:["A rule engine with 23 pluggable rules in 4 severities, from whitespace and smart quotes to duplicate document numbers and skipped revisions.","Live issue stream with filtering, suggestions and a one-click highlighted Excel export.","Cleans the workbook and renames the PDF and DWG files whose names carry invisible characters.","Title-case fixer that unifies capitalisation across every selected sheet."],
  kpis:[["≈6 h","saved per user, per project"],["23","validation rules"],["1 019","cells checked in one run"]],
  stack:["C#",".NET 8","WPF · MVVM","ClosedXML","ISO 19650"],
- media:[["midp/midp-02-results.webp","cap","Results: 684 errors and 309 warnings in 1 019 cells, each with a suggested fix."],["midp/midp-01-configure.webp","cap","Configure: pick sheets, header row and title column. The rule catalogue sits beside it."],["midp/midp-03-capitalisation.webp","cap","Title capitalisation fixer applied across all selected sheets."],["midp/midp-04-pipeline.webp","ill","Pipeline: workbook in, 23 rules, three outputs (highlighted Excel, cleaned copy, renamed files)."]],
+ media:[["midp/midp-01-configure.webp","cap","Configure: pick sheets, header row and title column. The rule catalogue sits beside it."],["midp/midp-02-results.webp","cap","Results: 684 errors and 309 warnings in 1 019 cells, each with a suggested fix."],["midp/midp-03-capitalisation.webp","cap","Title capitalisation fixer applied across all selected sheets."],["midp/midp-01-pipeline.svg","ill","Pipeline: workbook in, 23 rules, three outputs (highlighted Excel, cleaned copy, renamed files)."]],
  folder:{was:"3 screenshots + full source (rule engine, services, MVVM).",gal:"3 captures + pipeline diagram",vid:"None yet",next:["60 s recording: configure → validate → export","Screenshot of the highlighted Excel","Before/after of the renamed PDF folder"]}},
 {id:"bimscope",no:"P-03",title:"BimScope",kicker:"Revit ↔ ETABS structural integration and result visualisation",tags:["str","bim"],platform:"Revit API · ETABS API",org:"Personal R&D",year:"2025",
  problem:"Structural engineers rebuild the same frame twice: once in Revit for drawings, once in ETABS for analysis. The two drift apart, and results never come back into the model where coordination happens.",
  built:["Bidirectional sync of columns, beams and floors, mapping Revit types to ETABS sections and materials.","WPF editors for line, area and point loads, load combinations and boundary-condition presets.","Pulls moments, shears and axial forces back from ETABS and draws them as colour-coded diagrams in Revit 3D views.","Clean Architecture with MVVM, so the ETABS adapter can be swapped for SAP2000."],
  kpis:[["2-way","model sync"],["M · V · N","results in Revit"],["1","model to maintain"]],
  stack:["C#","Revit API","ETABS API","WPF · MVVM","Clean Architecture"],
- media:[["bimscope/bs-02-moment-diagrams.webp","cap","Bending moment diagrams drawn on the Revit analytical frame."],["bimscope/bs-03-slab-contours.webp","cap","Slab result contours with values at the analysis points."],["bimscope/bs-06-load-application.webp","cap","Load application: line, area and point loads per case."],["bimscope/bs-10-dataflow.webp","ill","Data flow between Revit, the BimScope core and ETABS."]],
+ media:[["bimscope/bs-02-moment-diagrams.webp","cap","Bending moment diagrams drawn on the Revit analytical frame."],["bimscope/bs-03-slab-contours.webp","cap","Slab result contours with values at the analysis points."],["bimscope/bs-01-analytical-frame.webp","cap","Analytical frame generated from the physical model."],["bimscope/bs-04-physical-model.webp","cap","The physical Revit model it starts from."],["bimscope/bs-05-etabs-sync.webp","cap","The same frame after sync into ETABS."],["bimscope/bs-06-load-application.webp","cap","Load application: line, area and point loads per case."],["bimscope/bs-07-load-combinations.webp","cap","Load combination manager."],["bimscope/bs-08-boundary-conditions.webp","cap","Boundary-condition presets with constraint details."],["bimscope/bs-09-ribbon.webp","cap","BimScope ribbon tab in Revit."],["bimscope/bs-01-dataflow.svg","ill","Data flow between Revit, the BimScope core and ETABS."]],
  folder:{was:"9 small screenshots. The folder name promises a demo video, but none is there yet.",gal:"9 captures + data-flow diagram",vid:"Missing: record it",next:["2–3 min demo: model → push → run → results in Revit","1920 px captures of the moment diagrams and contours","Repo link"]}},
 {id:"layers",no:"P-04",title:"CG Tools for AutoCAD",kicker:"Layer Generator · Layers Merger · Layer Fixer · Raster Embedder",tags:["cad"],platform:"AutoCAD .NET 2023–26",org:"Consultancy Group",year:"2025–26",
  problem:"Consultant drawings arrive with hundreds of non-standard layers, blocks on the wrong layers and linked logos that break when the file moves. Cleaning them by hand takes hours per package and is never consistent.",
  built:["Layer Generator creates the company layer set from Excel across a batch of DWGs.","Layers Merger moves every entity from selected layers into one target and purges the rest. Prefix exclusions protect disciplines.","Layer Fixer reads an abbreviation-to-layer map and moves matching blocks with the right ACI colour.","Raster Embedder turns linked title-block images into embedded objects. One WixSharp MSI serves AutoCAD 2023 to 2026."],
  kpis:[["311","entities merged in one run"],["4","modules, one ribbon tab"],["4","AutoCAD versions"]],
  stack:["C#","AutoCAD .NET API","WPF · MVVM","Microsoft.Extensions.Hosting","WixSharp"],
- media:[["layers/ly-before.webp","cap","Before: a consultant plan with mixed, non-standard layers."],["layers/ly-after.webp","cap","After merge: one clean, company-standard layer."],["layers/ly-merger-complete.webp","cap","Merge complete: 311 entities moved, 13 layers deleted, 0 errors."],["layers/ly-02-suite.webp","ill","The suite: four modules, one host, one installer."]],
+ media:[["layers/ly-before.webp","cap","Before: a consultant plan with mixed, non-standard layers."],["layers/ly-after.webp","cap","After merge: one clean, company-standard layer."],["layers/ly-merger-complete.webp","cap","Merge complete: 311 entities moved, 13 layers deleted, 0 errors."],["layers/ly-merger-configure.webp","cap","Merger configure step with prefix exclusions."],["layers/ly-generator.webp","cap","Layer Generator: Excel source to batch DWGs."],["layers/ly-ribbon.webp","cap","CG Tools ribbon tab inside AutoCAD."],["layers/ly-01-fixer.svg","rec","Layer Fixer complete step, drawn from the module's view model and Excel format."],["layers/ly-02-suite.svg","ill","The suite: four modules, one host, one installer."]],
  folder:{was:"6 screenshots + full solution (4 modules, installer, DI host).",gal:"6 captures + Layer Fixer UI + suite overview",vid:"None yet",next:["45 s merger recording on a real consultant DWG","Real Layer Fixer and Raster Embedder screenshots","MSI installer screen"]}},
 {id:"autodim",no:"P-05",title:"Auto-Dimensions",kicker:"Columns to grid axes, dimensioned in one command",tags:["cad","str"],platform:"AutoCAD .NET · Revit API",org:"Consultancy Group",year:"2025",
  problem:"A column setting-out plan needs every column face tied to its grid axis, plus chain and overall dimensions. On a large floor that is hundreds of clicks per sheet, and they all need redoing when the grid moves.",
  built:["Finds columns and grid axes by layer or category and pairs each column with its nearest axis.","Places face-to-axis, chain and overall dimensions on the standard dim style and layer.","Skips concentric columns where the office standard says so.","The same logic runs in AutoCAD and in Revit structural plans."],
  kpis:[["1","command per sheet"],["20 → 33","columns → dimensions"],["0","manual edits"]],
  stack:["C#","AutoCAD .NET API","Revit API","WPF"],
- media:[["autodim/ad-01-before-after.webp","ill","Before and after on a 5 × 4 grid: chain, overall and face-to-axis dimensions."],["autodim/ad-02-dialog.webp","ui","Plugin dialog: targets, dimension rules and placement settings."],["autodim/ad-03-sheet.webp","ill","Finished setting-out sheet in the title block."]],
+ media:[["autodim/ad-01-before-after.svg","ill","Before and after on a 5 × 4 grid: chain, overall and face-to-axis dimensions."],["autodim/ad-02-dialog.svg","ui","Plugin dialog: targets, dimension rules and placement settings."],["autodim/ad-03-sheet.svg","ill","Finished setting-out sheet in the title block."]],
  video:{anim:"autodim",cap:"Dimensions placed column by column"},
  folder:{was:"Empty.",gal:"Before/after · dialog concept · finished sheet",vid:"Animated run (canvas)",next:["Real before/after DWG screenshots","30 s screen recording of a run","Minutes per sheet, manual vs plugin"]}},
 {id:"gridgen",no:"P-06",title:"Grid Generator",kicker:"Structural grids with bubbles and dimensions from one line of spans",tags:["cad","str"],platform:"AutoCAD .NET",org:"Personal R&D",year:"2025",
@@ -458,7 +452,7 @@ const PROJECTS = [
  built:["Type spans the way engineers write them: 3*6000, 7500, 2*6000.","Live preview of axes, labels and dimension chains before anything is drawn.","Bubbles at both ends, chain and overall dimensions, and labels that skip I and O.","Everything lands on the office's grid and dimension layers."],
  kpis:[["< 2 s","per grid"],["≈ 25 min","manual equivalent"],["22","bubbles placed"]],
  stack:["C#","AutoCAD .NET API","WPF"],
- media:[["gridgen/gg-02-output.webp","ill","Generated grid with chain and overall dimensions."],["gridgen/gg-01-dialog.webp","ui","Spacing input with live preview."]],
+ media:[["gridgen/gg-01-dialog.svg","ui","Spacing input with live preview."],["gridgen/gg-02-output.svg","ill","Generated 6 × 5 grid with chain and overall dimensions."]],
  video:{anim:"gridgen",cap:"From span string to dimensioned grid"},
  folder:{was:"Empty.",gal:"Dialog concept · generated grid",vid:"Animated run (canvas)",next:["Add the repo link from the CV","Real screenshot of a generated grid","20 s recording"]}},
 {id:"autojoin",no:"P-07",title:"AutoJoin",kicker:"Joins structural elements so quantities are counted once",tags:["bim","str"],platform:"Revit API",org:"Personal R&D",year:"2024",
@@ -466,39 +460,41 @@ const PROJECTS = [
  built:["Pick a source and a target category: walls, floors, foundations, beams or columns.","A bounding-box pre-filter finds candidate pairs fast, then joins them in one transaction.","Reports pairs joined, already joined and failed.","WPF and MVVM with an external command and a ribbon button."],
  kpis:[["5","structural categories"],["1","transaction"],["0 m³","double-counted"]],
  stack:["C#","Revit API","WPF · MVVM"],
- media:[["autojoin/aj-02-before-after.webp","ill","Why it matters: the overlap is counted twice until the elements are joined."],["autojoin/aj-01-dialog.webp","rec","Join tool dialog, rebuilt from AutoJoinView.xaml."],["autojoin/aj-revit-section.webp","cap","Joined slab and beam in a Revit section."]],
+ media:[["autojoin/aj-01-dialog.svg","rec","Join tool dialog, rebuilt from AutoJoinView.xaml."],["autojoin/aj-02-before-after.svg","ill","Why it matters: the overlap is counted twice until the elements are joined."],["autojoin/aj-revit-section.webp","cap","Joined slab and beam in a Revit section."],["autojoin/aj-revit-elevation.webp","cap","Beams under the slab at Level 2."]],
+ video:{src:"media/autojoin/auto-join.mp4",poster:"media/autojoin/aj-01-dialog.svg",cap:"Screen recording",note:"The recording is an .avi file, which browsers can't play. Convert it to MP4 (H.264) and save it here:",path:"portfolio/media/autojoin/auto-join.mp4"},
  folder:{was:"2 tiny Revit captures, auto-join.avi, full source.",gal:"Dialog rebuild · before/after · 2 captures",vid:"auto-join.avi → convert to MP4",next:["Convert the AVI to MP4 (HandBrake or Clipchamp)","3D before/after of joined geometry","Schedule before/after showing the volume fixed"]}},
 {id:"colgen",no:"P-08",title:"Column Auto-Generation",kicker:"AutoCAD outlines to typed Revit columns with Dynamo",tags:["bim","str"],platform:"Dynamo · Revit",org:"Personal R&D",year:"2023",
  problem:"Modelling columns from consultant CAD means measuring each outline, creating a family type for every size, then placing them one by one.",
  built:["Reads closed polylines from one layer of the CAD link.","Groups outlines by size and creates the missing family types automatically.","Places columns at outline centres with the right rotation and base and top levels."],
  kpis:[["3","steps automated"],["0","types made by hand"],["1","graph, reusable"]],
  stack:["Dynamo","Revit","AutoCAD"],
- media:[["colgen/cg-01-pipeline.webp","ill","The graph: CAD link → curves → sizes → family types → placed columns."]],
+ media:[["colgen/cg-01-pipeline.svg","ill","The graph: CAD link → curves → sizes → family types → placed columns."]],
+ video:{src:"media/colgen/colgen-demo.mp4",poster:"media/colgen/cg-01-pipeline.svg",cap:"Screen recording",note:"This 24 MB recording isn't embedded in this copy. It plays in the full portfolio folder:",path:"portfolio/media/colgen/colgen-demo.mp4"},
  folder:{was:"One MP4 recording.",gal:"Pipeline + Dynamo graph illustration",vid:"Your MP4, as is",next:["Three stills from the video: CAD, graph, result","Screenshot of the real .dyn graph","Compress the MP4 below 15 MB for web sharing"]}},
 {id:"erp",no:"P-09",title:"EIONE ERP",kicker:"HR, Project Management and Payroll backend modules",tags:["ent"],platform:"ASP.NET Core · .NET 8",org:"Consultancy Group",year:"2025–26",
  problem:"An engineering consultancy runs on people, projects and timesheets. Spreadsheets for leave, payroll and project hours don't scale past a few teams and can't feed live delivery dashboards.",
  built:["HR: employee files, contracts, leave and attendance with multi-stage approvals, fingerprint integration and evaluations.","Payroll: contract-based salaries encrypted per branch, workday-driven runs with leave and overtime rules.","Project Management: WBS from projects to tasks, timesheets with grace-period locking, staffing and delivery dashboards.","REST APIs on a modular monolith with CQRS, EF Core, SignalR and Hangfire."],
  kpis:[["7","bounded modules"],["EN / AR","with RTL"],["CQRS","MediatR"]],
  stack:["C#","ASP.NET Core Web API","EF Core","SQL","MediatR","SignalR","Hangfire"],
- media:[["erp/erp-04-master-projects-monitor.webp","cap","Master projects monitor: daily hours by project and portfolio table."],["erp/erp-02-hr-dashboard.webp","cap","HR dashboard: attendance, contracts, demographics and turnover."],["erp/erp-06-task-board.webp","cap","Task board: to do, in progress, QA review, done."],["erp/erp-10-architecture.webp","ill","Platform architecture and the modules I built."]],
+ media:[["erp/erp-01-home-calendar.webp","cap","Home: team calendar with leave, missions and meeting rooms."],["erp/erp-04-master-projects-monitor.webp","cap","Master projects monitor: daily hours by project and portfolio table."],["erp/erp-02-hr-dashboard.webp","cap","HR dashboard: attendance, contracts, demographics and turnover."],["erp/erp-03-workforce-highlights.webp","cap","Workforce highlights with weekly attendance trend."],["erp/erp-05-ongoing-projects.webp","cap","Ongoing projects register."],["erp/erp-06-task-board.webp","cap","Task board: to do, in progress, QA review, done."],["erp/erp-07-my-people.webp","cap","My people: workload and deadlines per engineer."],["erp/erp-08-team-allocation.webp","cap","Team allocation by package."],["erp/erp-09-requests.webp","cap","Requests and support tickets."],["erp/erp-01-architecture.svg","ill","Platform architecture and the modules I built."]],
  folder:{was:"9 screenshots + platform write-up.",gal:"9 captures + architecture diagram",vid:"None yet",next:["Swagger view of the endpoints you built","ER diagram of the HR and Payroll schema","Blur real employee names before public sharing"]}}
 ];
 
 const CONCEPTS_RE = [
- ["lab/plotmax.webp","PlotMax","From plot to feasibility in ten minutes","Enter a plot and its zoning; get ranked massing options with unit mix, parking, GFA, cost and margin. Zoning and parking ratios come from the same rule data as the ACUD Checker.","Land decisions are made in days, usually before an architect is appointed. A fast, rule-correct feasibility study is worth more than a beautiful one next month.","ACUD rule data · Grid Generator · new massing engine","10–12 weeks"],
- ["lab/arealedger.webp","AreaLedger","Saleable areas you can sign a contract on","Computes net, balcony and common-share area for every unit straight from the model, on every revision, and flags any unit whose area changed since the last contract issue.","Area disputes drive refunds, complaints and legal cost. The model, the contract and the sales sheet should never disagree.","Revit API areas · ACUD/MIDP rule engine · ERP sync","6–8 weeks"],
- ["lab/unitscope.webp","UnitScope","The sales gallery runs on the BIM model","A web viewer of the tower with live availability, price, view and real plan for every unit. Agents reserve units in one click, and the CRM updates.","Sales teams stop selling from out-of-date PDFs, and management sees sell-through by floor and view in real time.","New build: APS or IFC web viewer + CRM link · ERP backend patterns","10 weeks"],
- ["lab/snagtrack.webp","SnagTrack","Handover without the spreadsheet","Snags pinned to rooms on a mobile plan, with photos, trade and responsible subcontractor. Closing a snag needs a photo, and readiness rolls up per building.","Faster handovers, fewer repeat visits, and back-charges and retention release backed by evidence.","New build: mobile web app · room data from Revit · ASP.NET Core backend","8 weeks"],
- ["lab/finishselect.webp","FinishSelect","Finishing upgrades priced from the BOQ","Buyers pick finishing packages per room. Price, instalment change and lead time update live, and the contractor change order is generated from model quantities and contract rates.","Upgrades become a profit line instead of a site headache, and nothing is sold that the site can't deliver in time.","Revit QTO / BOQ linking · ERP approvals · buyer web front end","8–10 weeks"],
- ["lab/progresspay.webp","ProgressPay","Instalments tied to verified progress","Construction milestones are verified against the model with drone or 360° captures. Buyer instalments and contractor payment certificates are released from the same evidence.","Better collections, fewer buyer disputes about progress, and certified quantities that match the model.","SitePulse 4D · AutoJoin-clean quantities · EIONE ERP payments","12 weeks"]
+ ["lab/lab-re-01-plotmax.svg","PlotMax","From plot to feasibility in ten minutes","Enter a plot and its zoning; get ranked massing options with unit mix, parking, GFA, cost and margin. Zoning and parking ratios come from the same rule data as the ACUD Checker.","Land decisions are made in days, usually before an architect is appointed. A fast, rule-correct feasibility study is worth more than a beautiful one next month.","ACUD rule data · Grid Generator · new massing engine","10–12 weeks"],
+ ["lab/lab-re-02-arealedger.svg","AreaLedger","Saleable areas you can sign a contract on","Computes net, balcony and common-share area for every unit straight from the model, on every revision, and flags any unit whose area changed since the last contract issue.","Area disputes drive refunds, complaints and legal cost. The model, the contract and the sales sheet should never disagree.","Revit API areas · ACUD/MIDP rule engine · ERP sync","6–8 weeks"],
+ ["lab/lab-re-03-unitscope.svg","UnitScope","The sales gallery runs on the BIM model","A web viewer of the tower with live availability, price, view and real plan for every unit. Agents reserve units in one click, and the CRM updates.","Sales teams stop selling from out-of-date PDFs, and management sees sell-through by floor and view in real time.","New build: APS or IFC web viewer + CRM link · ERP backend patterns","10 weeks"],
+ ["lab/lab-re-04-snagtrack.svg","SnagTrack","Handover without the spreadsheet","Snags pinned to rooms on a mobile plan, with photos, trade and responsible subcontractor. Closing a snag needs a photo, and readiness rolls up per building.","Faster handovers, fewer repeat visits, and back-charges and retention release backed by evidence.","New build: mobile web app · room data from Revit · ASP.NET Core backend","8 weeks"],
+ ["lab/lab-re-05-finishselect.svg","FinishSelect","Finishing upgrades priced from the BOQ","Buyers pick finishing packages per room. Price, instalment change and lead time update live, and the contractor change order is generated from model quantities and contract rates.","Upgrades become a profit line instead of a site headache, and nothing is sold that the site can't deliver in time.","Revit QTO / BOQ linking · ERP approvals · buyer web front end","8–10 weeks"],
+ ["lab/lab-re-06-progresspay.svg","ProgressPay","Instalments tied to verified progress","Construction milestones are verified against the model with drone or 360° captures. Buyer instalments and contractor payment certificates are released from the same evidence.","Better collections, fewer buyer disputes about progress, and certified quantities that match the model.","SitePulse 4D · AutoJoin-clean quantities · EIONE ERP payments","12 weeks"]
 ];
 const CONCEPTS = [
- ["lab/ruleforge.webp","RuleForge","Authority code → executable checks","An LLM reads authority clauses in Arabic or English and drafts structured rules. An engineer approves each rule once, and from then on it runs in Revit on every project.","Turns the 116 semi-manual ACUD conditions into automated checks and makes onboarding a new authority's code a matter of weeks.","ACUD Checker · MIDP rule engine · Revit API","8–10 weeks"],
- ["lab/spansmith.webp","SpanSmith","Generative column-grid optimiser","Generates hundreds of grid layouts around cores and parking modules, sizes each one in ETABS through the API, and plots cost against span.","Settles the structural grid in the first design meeting, with numbers behind it.","Grid Generator · BimScope · ETABS API","10–12 weeks"],
- ["lab/clashlens.webp","ClashLens","Clash triage for coordination","Groups raw Navisworks clashes by system, level and location into real issues, closes soft clashes, and opens one ACC issue per group with an owner.","Coordination meetings review 86 issues instead of 1 240 clashes.","Navisworks API · ACC · site coordination experience","6–8 weeks"],
- ["lab/carbonlens.webp","CarbonLens","Embodied carbon while you model","Multiplies live Revit quantities by EPD factors on every sync and runs what-if swaps for concrete mixes and rebar.","Puts carbon next to cost in value engineering, early enough to change the design.","AutoJoin (clean quantities) · QTO/BOQ · Revit API","6 weeks"],
- ["lab/corridortwin.webp","CorridorTwin","Utility conflicts along road corridors","Overlays Civil 3D corridors with ArcGIS utility layers and checks cover depth and crossings along every chainage.","Finds service clashes on the drawing instead of in the trench.","Civil 3D · InfraWorks · ArcGIS Pro","10 weeks"],
- ["lab/sitepulse.webp","SitePulse 4D","Planned vs built, every week","Compares drone and 360° captures with the 4D model to mark elements built, then feeds measured progress into the ERP project module.","Directors see progress measured on site rather than typed into a report.","EIONE ERP PM module · Navisworks TimeLiner","12 weeks"]
+ ["lab/lab-01-ruleforge.svg","RuleForge","Authority code → executable checks","An LLM reads authority clauses in Arabic or English and drafts structured rules. An engineer approves each rule once, and from then on it runs in Revit on every project.","Turns the 116 semi-manual ACUD conditions into automated checks and makes onboarding a new authority's code a matter of weeks.","ACUD Checker · MIDP rule engine · Revit API","8–10 weeks"],
+ ["lab/lab-02-spansmith.svg","SpanSmith","Generative column-grid optimiser","Generates hundreds of grid layouts around cores and parking modules, sizes each one in ETABS through the API, and plots cost against span.","Settles the structural grid in the first design meeting, with numbers behind it.","Grid Generator · BimScope · ETABS API","10–12 weeks"],
+ ["lab/lab-03-clashlens.svg","ClashLens","Clash triage for coordination","Groups raw Navisworks clashes by system, level and location into real issues, closes soft clashes, and opens one ACC issue per group with an owner.","Coordination meetings review 86 issues instead of 1 240 clashes.","Navisworks API · ACC · site coordination experience","6–8 weeks"],
+ ["lab/lab-04-carbonlens.svg","CarbonLens","Embodied carbon while you model","Multiplies live Revit quantities by EPD factors on every sync and runs what-if swaps for concrete mixes and rebar.","Puts carbon next to cost in value engineering, early enough to change the design.","AutoJoin (clean quantities) · QTO/BOQ · Revit API","6 weeks"],
+ ["lab/lab-05-corridortwin.svg","CorridorTwin","Utility conflicts along road corridors","Overlays Civil 3D corridors with ArcGIS utility layers and checks cover depth and crossings along every chainage.","Finds service clashes on the drawing instead of in the trench.","Civil 3D · InfraWorks · ArcGIS Pro","10 weeks"],
+ ["lab/lab-06-sitepulse.svg","SitePulse 4D","Planned vs built, every week","Compares drone and 360° captures with the 4D model to mark elements built, then feeds measured progress into the ERP project module.","Directors see progress measured on site rather than typed into a report.","EIONE ERP PM module · Navisworks TimeLiner","12 weeks"]
 ];
 
 const $ = (s, r = document) => r.querySelector(s);
@@ -566,6 +562,13 @@ function render(){
         <div><h4>Stack</h4><div class="stack">${p.stack.map(s=>`<span>${esc(s)}</span>`).join("")}</div></div>
       </div>
     </div>
+    <details class="folder"><summary>Project folder · what's there and what to add</summary>
+      <div class="folder-grid">
+        <div><span class="label">Was in the folder</span><p>${esc(p.folder.was)}</p></div>
+        <div><span class="label">Added for the portfolio</span><p>Gallery: ${esc(p.folder.gal)}</p><p>Video: ${esc(p.folder.vid)}</p></div>
+        <div><span class="label">Capture next</span><ul>${p.folder.next.map(n=>`<li>${esc(n)}</li>`).join("")}</ul></div>
+      </div>
+    </details>
   </article>`).join("");
   const conceptHTML = ([src,name,tag,what,why,builds,mvp])=>`
   <article class="concept">
@@ -575,6 +578,8 @@ function render(){
   </article>`;
   $("#lab-re").innerHTML = CONCEPTS_RE.map(conceptHTML).join("");
   $("#labgrid").innerHTML = CONCEPTS.map(conceptHTML).join("");
+  $("#bp tbody").innerHTML = PROJECTS.map(p=>`<tr><td>${p.no} · ${esc(p.title)}</td><td>${esc(p.folder.was)}</td><td>${esc(p.folder.gal)}</td><td>${esc(p.folder.vid)}</td><td><ul>${p.folder.next.map(n=>`<li>${esc(n)}</li>`).join("")}</ul></td></tr>`).join("")
+   + `<tr><td>Innovation lab</td><td>New</td><td>12 concept visuals in two tracks: real-estate developers and engineering teams</td><td>None</td><td><ul><li>Pick one developer concept (AreaLedger is the quickest) and build a 2-week proof of concept on a real project</li></ul></td></tr>`;
 }
 
 function initGallery(g){
