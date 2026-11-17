@@ -176,7 +176,7 @@ details.folder[open] summary::before{content:"−"}
 
 /* video player */
 .vid{background:#0B0E12;border:1px solid var(--rule);position:relative}
-.vid video{display:block;width:100%;aspect-ratio:16/10;background:#0B0E12}
+.vid video,.vid iframe{display:block;width:100%;aspect-ratio:16/10;background:#0B0E12;border:0}
 .vid-miss{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:24px;background:linear-gradient(rgba(11,14,18,.82),rgba(11,14,18,.92)),var(--poster) center/contain no-repeat #0B0E12;color:#E6EAEE}
 .vid-miss b{font-family:var(--display);font-size:var(--step-1);display:block}
 .vid-miss span{display:block;color:#A3ADB8;font-size:var(--step--1);margin-top:6px;max-width:46ch}
@@ -427,7 +427,8 @@ const PROJECTS = [
  kpis:[["2-way","model sync"],["M · V · N","results in Revit"],["1","model to maintain"]],
  stack:["C#","Revit API","ETABS API","WPF · MVVM","Clean Architecture"],
  media:[["bimscope/bs-02-moment-diagrams.webp","cap","Bending moment diagrams drawn on the Revit analytical frame."],["bimscope/bs-03-slab-contours.webp","cap","Slab result contours with values at the analysis points."],["bimscope/bs-01-analytical-frame.webp","cap","Analytical frame generated from the physical model."],["bimscope/bs-04-physical-model.webp","cap","The physical Revit model it starts from."],["bimscope/bs-05-etabs-sync.webp","cap","The same frame after sync into ETABS."],["bimscope/bs-06-load-application.webp","cap","Load application: line, area and point loads per case."],["bimscope/bs-07-load-combinations.webp","cap","Load combination manager."],["bimscope/bs-08-boundary-conditions.webp","cap","Boundary-condition presets with constraint details."],["bimscope/bs-09-ribbon.webp","cap","BimScope ribbon tab in Revit."],["bimscope/bs-01-dataflow.svg","ill","Data flow between Revit, the BimScope core and ETABS."]],
- folder:{was:"9 small screenshots. The folder name promises a demo video, but none is there yet.",gal:"9 captures + data-flow diagram",vid:"Missing: record it",next:["2–3 min demo: model → push → run → results in Revit","1920 px captures of the moment diagrams and contours","Repo link"]}},
+ video:{yt:"0mB2f2_gUA8",start:4704,cap:"Live demo starts at 1:18:24"},
+ folder:{was:"9 small screenshots. The folder name promises a demo video, but none is there yet.",gal:"9 captures + data-flow diagram",vid:"YouTube live demo (from 1:18:24)",next:["1920 px captures of the moment diagrams and contours","A short clip trimmed to just the live demo","Repo link"]}},
 {id:"layers",no:"P-04",title:"CG Tools for AutoCAD",kicker:"Layer Generator · Layers Merger · Layer Fixer · Raster Embedder",tags:["cad"],platform:"AutoCAD .NET 2023–26",org:"Consultancy Group",year:"2025–26",
  problem:"Consultant drawings arrive with hundreds of non-standard layers, blocks on the wrong layers and linked logos that break when the file moves. Cleaning them by hand takes hours per package and is never consistent.",
  built:["Layer Generator creates the company layer set from Excel across a batch of DWGs.","Layers Merger moves every entity from selected layers into one target and purges the rest. Prefix exclusions protect disciplines.","Layer Fixer reads an abbreviation-to-layer map and moves matching blocks with the right ACI colour.","Raster Embedder turns linked title-block images into embedded objects. One WixSharp MSI serves AutoCAD 2023 to 2026."],
@@ -503,6 +504,8 @@ function galleryHTML(items, label){
 }
 
 function videoHTML(v){
+  if (v.yt) return `<div><div class="media-head"><span class="label">Video · ${esc(v.cap)}</span><span class="pill cap">YouTube</span></div>
+    <div class="vid"><iframe src="https://www.youtube-nocookie.com/embed/${v.yt}?start=${v.start||0}" title="${esc(v.cap)}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div></div>`;
   const pill = v.ill ? `<span class="pill ill">Animated demo · illustration</span>` : `<span class="pill cap">Screen recording</span>`;
   return `<div><div class="media-head"><span class="label">Video · ${esc(v.cap)}</span>${pill}</div>
     <div class="vid" style="--poster:url('${v.poster}')"><video controls preload="metadata" playsinline poster="${v.poster}"><source src="${v.src}" type="video/mp4"></video>
@@ -616,6 +619,7 @@ function initFilters(){
 function initVideos(){
   document.querySelectorAll("div.vid").forEach(v=>{
     const src = $("source", v), miss = $(".vid-miss", v), vid = $("video", v);
+    if (!src || !vid || !miss) return;
     const fail = ()=>{ miss.hidden = false; vid.removeAttribute("controls"); };
     src.addEventListener("error", fail);
     vid.addEventListener("error", fail);
